@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f10c4a5a2414004adcb955b2526cde, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Virtual Acoustics
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: dd414b0ba15cc744bbf44122d4ce49d6
+    ParentPath: Virtual Acoustics/Default Work Unit
+    guid: dd414b0ba15cc744bbf44122d4ce49d6
+    GuidInternal: 
+    m_lastTime: -8584645947760209864
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Master-Mixer Hierarchy
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: d9ac90a129a71f4fa239e15a431bd79c
+    ParentPath: Master-Mixer Hierarchy/Default Work Unit
+    guid: d9ac90a129a71f4fa239e15a431bd79c
+    GuidInternal: 
+    m_lastTime: -8584645947760556577
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d9ac90a129a71f4fa239e15a431bd79c
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: SoundBanks
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 17a4ab333b61f845ac8aaf6ff7700fe0
+    ParentPath: SoundBanks/Default Work Unit
+    guid: 17a4ab333b61f845ac8aaf6ff7700fe0
+    GuidInternal: 
+    m_lastTime: -8584645947760460988
+    List: []
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Events
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: b3855d273c31e7408df7353777ecaa52
+    ParentPath: Events/Default Work Unit
+    guid: b3855d273c31e7408df7353777ecaa52
+    GuidInternal: 
+    m_lastTime: -8584645947760515614
+    List: []
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Game Parameters
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 2a3a09ce20c0e44387ab0fadb4a9343a
+    ParentPath: Game Parameters/Default Work Unit
+    guid: 2a3a09ce20c0e44387ab0fadb4a9343a
+    GuidInternal: 
+    m_lastTime: -8584645947760442811
+    List: []
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: States
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: ffcf3cdda1806043b5f9a67bea619978
+    ParentPath: States/Default Work Unit
+    guid: ffcf3cdda1806043b5f9a67bea619978
+    GuidInternal: 
+    m_lastTime: -8584645947760479654
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Switches
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 7910244b84312e48a5a6e13d6621ed2a
+    ParentPath: Switches/Default Work Unit
+    guid: 7910244b84312e48a5a6e13d6621ed2a
+    GuidInternal: 
+    m_lastTime: -8584645947760497642
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    PathAndIcons:
+    - ElementName: Triggers
+      ObjectType: 5
+      guid: 00000000000000000000000000000000
+    - ElementName: Default Work Unit
+      ObjectType: 12
+      guid: 932aa3aac475a84da6dcc23b79779704
+    ParentPath: Triggers/Default Work Unit
+    guid: 932aa3aac475a84da6dcc23b79779704
+    GuidInternal: 
+    m_lastTime: -8584645947760331624
+    List: []
+  ExpandedFileSystemItemIds: 
+  ExpandedWaapiItemIds: 
+  AutoSyncSelection: 0
+  autoPopulateEnabled: 1
+  currentDataSource: 0
+  CurrentPluginConfig: 
