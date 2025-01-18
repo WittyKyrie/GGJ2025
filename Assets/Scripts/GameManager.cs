@@ -1,12 +1,14 @@
 ﻿using System;
 using UnityEngine;
 using Util;
+using Util.EventHandleSystem;
 
 public enum GameState
 {
     PreAnimation,      // 开场前动画阶段
-    Player1Turn,       // Player1操作阶段
-    Player2Turn,       // Player2操作阶段
+    SelectBuff,        // 抽卡牌阶段
+    MainPlayerTurn,       // Player1操作阶段
+    SubPlayerTurn,       // Player2操作阶段
     ReleaseItem,       // 释放道具阶段
     Drinking,          // 喝酒阶段
     Settlement,        // 结算阶段
@@ -15,6 +17,9 @@ public enum GameState
 
 public class GameManager : Singleton<GameManager>
 {
+    public Player.Player mainPlayer;
+    public Player.Player subPlayer;
+    
     private GameState CurrentState { get; set; }
 
     public delegate void OnStateChange(GameState newState);
@@ -32,10 +37,10 @@ public class GameManager : Singleton<GameManager>
             case GameState.PreAnimation:
                 HandlePreAnimation();
                 break;
-            case GameState.Player1Turn:
+            case GameState.MainPlayerTurn:
                 HandlePlayer1Turn();
                 break;
-            case GameState.Player2Turn:
+            case GameState.SubPlayerTurn:
                 HandlePlayer2Turn();
                 break;
             case GameState.ReleaseItem:
@@ -50,6 +55,9 @@ public class GameManager : Singleton<GameManager>
             case GameState.Pause:
                 HandlePause();
                 break;
+            case GameState.SelectBuff:
+                HandleSelectBuff();
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -62,6 +70,11 @@ public class GameManager : Singleton<GameManager>
         Debug.Log("状态已更改为: " + newState);
     }
 
+    private void HandleSelectBuff()
+    {
+        ChangeState(GameState.SelectBuff);
+    }
+    
     private void HandlePreAnimation()
     {
         // 处理开场前动画
@@ -69,11 +82,13 @@ public class GameManager : Singleton<GameManager>
 
     private void HandlePlayer1Turn()
     {
+        QuickEvent.DispatchMessage(new ShowPlayerTurnText(true));
         // 处理 Player1 操作
     }
 
     private void HandlePlayer2Turn()
     {
+        QuickEvent.DispatchMessage(new ShowPlayerTurnText(false));
         // 处理 Player2 操作
     }
 
@@ -108,7 +123,7 @@ public class GameManager : Singleton<GameManager>
         {
             Time.timeScale = 1f;
             // 恢复到之前的状态，这里以 Player1 操作阶段为例
-            ChangeState(GameState.Player1Turn);
+            ChangeState(GameState.MainPlayerTurn);
         }
     }
 }
