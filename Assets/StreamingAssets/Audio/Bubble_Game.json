@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3676622988",
+    "Type": "User",
+    "GUID": "{71F05E94-AD84-49B3-A125-A4BE7FDB8D4C}",
+    "Language": "SFX",
+    "Hash": "{38DFA2FE-AEF3-D7C3-4250-CF9EB59ECE0C}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Bubble_Game",
+    "ShortName": "Bubble_Game",
+    "Path": "Bubble_Game.bnk",
+    "Media": [
+     {
+      "Id": "728729985",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_amb_bar.wav",
+      "CachePath": "4E/{4E99FD01-F39E-85E0-C8F9-E18D8DA0E163}.wem"
+     },
+     {
+      "Id": "848912408",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_amb_bar_menu.wav",
+      "CachePath": "74/{74F23154-539C-0034-7508-A823FBBC8FA5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3282807380",
+      "Name": "Play_sfx_amb_bar_ingame",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_sfx_amb_bar_ingame",
+      "GUID": "{BA385942-880F-4A31-842F-A70833EEAC20}",
+      "DurationType": "OneShot",
+      "DurationMin": "36.01066",
+      "DurationMax": "36.01066",
+      "MediaRefs": [
+       {
+        "Id": "728729985"
+       },
+       {
+        "Id": "848912408"
+       }
+      ]
+     },
+     {
+      "Id": "2571413926",
+      "Name": "Play_sfx_amb_bar_menu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_sfx_amb_bar_menu",
+      "GUID": "{2B01B93D-D660-444D-833B-7C30D12A7431}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "728729985"
+       },
+       {
+        "Id": "848912408"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0ED4F684-A832-9FDF-1C64-35BFC89907D6}"
+ }
+}

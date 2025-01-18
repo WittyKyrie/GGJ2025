@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2571413926	Play_sfx_amb_bar_menu			\Default Work Unit\Play_sfx_amb_bar_menu	
+	3282807380	Play_sfx_amb_bar_ingame			\Default Work Unit\Play_sfx_amb_bar_ingame	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	728729985	sfx_amb_bar	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\4E\{4E99FD01-F39E-85E0-C8F9-E18D8DA0E163}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_amb_bar		577144
+	848912408	sfx_amb_bar_menu	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\74\{74F23154-539C-0034-7508-A823FBBC8FA5}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\Menu\sfx_amb_bar_menu		2878841
+

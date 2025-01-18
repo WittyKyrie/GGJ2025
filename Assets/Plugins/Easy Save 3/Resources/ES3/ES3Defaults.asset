@@ -30,6 +30,11 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
+    - Ak.Wwise.Api.WAAPI
+    - AK.Wwise.Unity.API
+    - AK.Wwise.Unity.API.WwiseTypes
+    - AK.Wwise.Unity.MonoBehaviour
+    - AK.Wwise.Unity.Timeline
     - Assembly-CSharp
     - Assembly-CSharp-firstpass
     - Febucci.Attributes.Runtime
@@ -49,6 +54,9 @@ MonoBehaviour:
     - MoreMountains.Feedbacks.URP
     - MoreMountains.Tools
     - Sirenix.OdinInspector.Modules.Unity.Addressables
+    - spine-csharp
+    - spine-unity
+    - spine-unity-examples
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

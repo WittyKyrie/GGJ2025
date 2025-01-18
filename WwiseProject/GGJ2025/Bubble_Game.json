@@ -1,0 +1,45 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3676622988",
+    "Type": "User",
+    "GUID": "{71F05E94-AD84-49B3-A125-A4BE7FDB8D4C}",
+    "Language": "SFX",
+    "Hash": "{59506DD8-0055-14DC-FE20-CC311057FE5C}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Bubble_Game",
+    "ShortName": "Bubble_Game",
+    "Path": "Bubble_Game.bnk",
+    "Media": [
+     {
+      "Id": "728729985",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_amb_bar.wav",
+      "CachePath": "F2/{F2A1E06D-7EB7-3055-93A8-71221675622E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1461565872",
+      "Name": "Play_sfx_amb_bar",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_sfx_amb_bar",
+      "GUID": "{BA385942-880F-4A31-842F-A70833EEAC20}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "728729985"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{49D9E2D0-BD3A-0AA9-C185-C8053709D949}"
+ }
+}
