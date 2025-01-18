@@ -13,7 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID PLAY_SFX_AMB_BAR = 1461565872U;
+        static const AkUniqueID PLAY_SFX_AMB_BAR_INGAME = 3282807380U;
+        static const AkUniqueID PLAY_SFX_AMB_BAR_MENU = 2571413926U;
     } // namespace EVENTS
 
     namespace BANKS

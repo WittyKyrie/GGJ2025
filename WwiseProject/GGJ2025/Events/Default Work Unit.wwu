@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{275D85B3-313C-40E7-8DF7-353777ECAA52}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_sfx_amb_bar" ID="{BA385942-880F-4A31-842F-A70833EEAC20}">
+				<Event Name="Play_sfx_amb_bar_ingame" ID="{BA385942-880F-4A31-842F-A70833EEAC20}">
 					<ChildrenList>
 						<Action Name="" ID="{EB966242-7191-4BAB-ACFF-281E48BFA87E}" ShortID="299799793">
 							<PropertyList>
@@ -11,7 +11,21 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_amb_bar" ID="{A439B500-9EB9-4A0C-AD5D-F916100DEFB1}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+									<ObjectRef Name="sfx_amb_bar" ID="{8E897715-8503-4C93-A37F-49074F648C1E}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_amb_bar_menu" ID="{2B01B93D-D660-444D-833B-7C30D12A7431}">
+					<ChildrenList>
+						<Action Name="" ID="{4F701A63-942F-4876-8289-79A48F79F6FB}" ShortID="929456102">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_amb_bar_menu" ID="{5D60D757-8202-4D62-B518-09C0E24532B7}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
