@@ -41,7 +41,11 @@ namespace Util.UI
                 btn.onClick.RemoveAllListeners();
                 btn.onClick.AddListener(() =>
                 {
-                    simpleUIAnimation.DoDieAnimation().OnComplete(() => { gameObject.SetActive(false); });
+                    simpleUIAnimation.DoDieAnimation().OnComplete(() =>
+                    {
+                        GameManager.Instance.ChangeState(GameState.MainPlayerTurn);
+                        gameObject.SetActive(false);
+                    });
                 });
             });
         }

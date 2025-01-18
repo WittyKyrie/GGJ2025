@@ -1,4 +1,5 @@
-﻿using Febucci.UI;
+﻿using DG.Tweening;
+using Febucci.UI;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Util.EventHandleSystem;
@@ -10,6 +11,16 @@ namespace Util.UI
         public TypewriterByCharacter red;
         public TypewriterByCharacter blue;
 
+        private void OnEnable()
+        {
+            QuickEvent.SubscribeListener<ShowPlayerTurnText>(ShowPlayerTurnText);
+        }
+
+        private void OnDisable()
+        {
+            QuickEvent.UnsubscribeListener<ShowPlayerTurnText>(ShowPlayerTurnText);
+        }
+
         [Button]
         public void ShowPlayerTurnText(ShowPlayerTurnText e)
         {
@@ -17,7 +28,7 @@ namespace Util.UI
             {
                 red.gameObject.SetActive(true);
                 red.StartShowingText();
-                red.onTextShowed.AddListener(() =>
+                DOVirtual.DelayedCall(1, () =>
                 {
                     red.onTextDisappeared.AddListener(() => red.gameObject.SetActive(false));
                     red.StartDisappearingText();
@@ -27,7 +38,7 @@ namespace Util.UI
             {
                 blue.gameObject.SetActive(true);
                 blue.StartShowingText();
-                blue.onTextShowed.AddListener(() =>
+                DOVirtual.DelayedCall(1, () =>
                 {
                     blue.onTextDisappeared.AddListener(() => blue.gameObject.SetActive(false));
                     blue.StartDisappearingText();
