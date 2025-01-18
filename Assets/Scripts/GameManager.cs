@@ -27,7 +27,23 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        LoadBank("Bubble_Game");
+        AkSoundEngine.PostEvent(SoundEffects.AmbBar, gameObject);
+        
         ChangeState(GameState.PreAnimation);
+    }
+    
+    private void LoadBank(string bank)
+    {
+        var bankID = AkSoundEngine.LoadBank(bank, out _);
+        if (bankID != 0)
+        {
+            Debug.Log($"成功加载bank: {bank}");
+        }
+        else
+        {
+            Debug.LogError($"加载bank失败: {bank}");
+        }
     }
 
     public void ChangeState(GameState newState)
