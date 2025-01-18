@@ -126,7 +126,10 @@ public class BeerGlass : MonoBehaviour
     private bool CheckGlassFull()
     {
         var val = IsGlassFull();
-        if (val) { QuickEvent.DispatchMessage(new BeerIsFullEvent());}
+        if (val)
+        {
+            QuickEvent.DispatchMessage(new BeerIsFullEvent());
+        }
         return val;
     }
     public bool IsGlassFull()
@@ -148,6 +151,7 @@ public class BeerGlass : MonoBehaviour
             fp.GetComponent<Rigidbody2D>().AddForce(direction * foamInitialSpeed, ForceMode2D.Impulse);
             fp.waterSurface = foamFloatLine;
             fp.beerGlass = this;
+            foamParticle.Add(fp);
             generatedFoamCount += 1;
             if(CheckGlassFull()) return;
         }

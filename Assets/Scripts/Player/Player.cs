@@ -11,8 +11,8 @@ namespace Player
     public class Player : MonoBehaviour
     {
         public bool isMainPlayer;
-        public float maxHealth = 100; //最大酒量
-        public float currentHealth = 100; //当前酒量
+        public float maxHealth = 10000; //最大酒量
+        public float currentHealth = 10000; //当前酒量
         public List<Buff.Buff> Buffs = new(); //道具列表
         public MMProgressBar bar;
         public PlayerBuffList playerBuffList;
@@ -48,10 +48,12 @@ namespace Player
         {
             playerBuffList.gameObject.SetActive(false);
             bar.gameObject.SetActive(true);
+            var result = beerGlass.GetBeerVolumeResult();
+            beerGlass.Reset();
             
             DOVirtual.DelayedCall(1f, () =>
             {
-                HandleDrinking(-50);
+                HandleDrinking(-result);
             });
         }
 
@@ -94,7 +96,7 @@ namespace Player
         }
 
         [Button]
-        public void HandleDrinking(int num)
+        public void HandleDrinking(float num)
         {
             bar.Initialization();
             currentHealth += num;
