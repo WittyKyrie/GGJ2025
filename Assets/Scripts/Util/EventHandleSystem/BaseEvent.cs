@@ -27,4 +27,8 @@ namespace Util.EventHandleSystem
     public struct SettlementEvent
     {
     }
+    
+    public struct BeerIsFullEvent
+    {
+    }
 }

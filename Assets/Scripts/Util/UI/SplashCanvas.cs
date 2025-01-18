@@ -14,6 +14,7 @@ namespace Util.UI
                 ExitFadeDuration = 0.4f
             };
             MMAdditiveSceneLoadingManager.LoadScene("MainScene", mySettings);
+            AkUnitySoundEngine.PostEvent(SoundEffects.Click, GameManager.Instance.gameObject);
         }
 
         public void AboutUs()
