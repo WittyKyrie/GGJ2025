@@ -178,21 +178,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a58ca05e752c0b646a86da07fd0d2c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foamPrefab: {fileID: 2141952674135571470, guid: 8090ecc5b983e7b478e71230a0104fc6, type: 3}
   foamFloatLine: {fileID: 3252052944931568506}
   generationTransform: {fileID: 3309148452784941392}
   generationRandomAngle: 30
   foamInitialSpeed: 1
-  formFoamThreshold: 30
+  formFoamThreshold: 25
   foamLineHeight: 5
   foamLineHeightOffset: 0.25
   foamLineLength: 4
   sampleCount: 10
-  calculationTimeFrame: 0.25
+  calculationTimeFrame: 0.2
   layerMask: 0
   flux: 0
   fluidCount: 0
+  generatedFoamCount: 0
   lastFluidCount: 0
+  fullGlassMaxCount: 500
+  volumePerFluid: 10
 --- !u!61 &907979883817579420
 BoxCollider2D:
   m_ObjectHideFlags: 0
