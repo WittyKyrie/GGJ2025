@@ -12,7 +12,6 @@ public enum GameState
     ReleaseItem,       // 释放道具阶段
     Drinking,          // 喝酒阶段
     Settlement,        // 结算阶段
-    Pause              // 暂停阶段
 }
 
 public class GameManager : Singleton<GameManager>
@@ -72,9 +71,6 @@ public class GameManager : Singleton<GameManager>
             case GameState.Settlement:
                 HandleSettlement();
                 break;
-            case GameState.Pause:
-                HandlePause();
-                break;
             case GameState.SelectBuff:
                 HandleSelectBuff();
                 break;
@@ -122,11 +118,6 @@ public class GameManager : Singleton<GameManager>
 
     private void HandleSettlement()
     {
-        // 处理结算阶段
-    }
-
-    private void HandlePause()
-    {
-        // 处理暂停阶段
+        QuickEvent.DispatchMessage(new SettlementEvent());
     }
 }

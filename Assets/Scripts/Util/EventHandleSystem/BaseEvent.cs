@@ -3,7 +3,7 @@ namespace Util.EventHandleSystem
 {
     public struct ShowPlayerTurnText
     {
-        public bool IsMainPlayer;
+        public readonly bool IsMainPlayer;
 
         public ShowPlayerTurnText(bool isMainPlayer)
         {
@@ -21,6 +21,10 @@ namespace Util.EventHandleSystem
     }
     
     public struct SubPlayerTurn
+    {
+    }
+    
+    public struct SettlementEvent
     {
     }
 }

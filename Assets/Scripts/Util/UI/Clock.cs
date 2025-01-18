@@ -44,7 +44,8 @@ namespace Util.UI
             {
                 StopCoroutine(_countdownCoroutine); // 如果之前有倒计时，先停止
             }
-            
+
+            countdownTime = 5;
             img.SetActive(true);
             _countdownCoroutine = StartCoroutine(CountdownRoutine(onCountdownEnd));
         }
