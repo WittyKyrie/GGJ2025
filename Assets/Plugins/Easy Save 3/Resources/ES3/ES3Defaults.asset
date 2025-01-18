@@ -54,6 +54,9 @@ MonoBehaviour:
     - MoreMountains.Feedbacks.URP
     - MoreMountains.Tools
     - Sirenix.OdinInspector.Modules.Unity.Addressables
+    - spine-csharp
+    - spine-unity
+    - spine-unity-examples
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

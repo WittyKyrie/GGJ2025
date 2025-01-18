@@ -30,8 +30,12 @@ public class GameManager : Singleton<GameManager>
         ChangeState(GameState.PreAnimation);
     }
 
-    private void Update()
+    public void ChangeState(GameState newState)
     {
+        CurrentState = newState;
+        StateChangeEvent?.Invoke(newState);
+        Debug.Log("状态已更改为: " + newState);
+        
         switch (CurrentState)
         {
             case GameState.PreAnimation:
@@ -63,21 +67,16 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void ChangeState(GameState newState)
-    {
-        CurrentState = newState;
-        StateChangeEvent?.Invoke(newState);
-        Debug.Log("状态已更改为: " + newState);
-    }
-
     private void HandleSelectBuff()
     {
-        // ChangeState(GameState.SelectBuff);
+        Debug.Log("选择界面");
     }
     
     private void HandlePreAnimation()
     {
         // 处理开场前动画
+        Debug.LogWarning("开场动画");
+        ChangeState(GameState.Settlement);
     }
 
     private void HandlePlayer1Turn()
