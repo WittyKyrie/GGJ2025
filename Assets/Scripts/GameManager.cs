@@ -28,14 +28,14 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         LoadBank("Bubble_Game");
-        AkSoundEngine.PostEvent(SoundEffects.AmbBar, gameObject);
+        AkUnitySoundEngine.PostEvent(SoundEffects.OutGameAmbBar, gameObject);
         
         ChangeState(GameState.PreAnimation);
     }
     
     private void LoadBank(string bank)
     {
-        var bankID = AkSoundEngine.LoadBank(bank, out _);
+        var bankID = AkUnitySoundEngine.LoadBank(bank, out _);
         if (bankID != 0)
         {
             Debug.Log($"成功加载bank: {bank}");
@@ -46,7 +46,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void ChangeState(GameState newState)
+    private void ChangeState(GameState newState)
     {
         CurrentState = newState;
         StateChangeEvent?.Invoke(newState);

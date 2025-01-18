@@ -1,5 +1,4 @@
-﻿using DG.Tweening;
-using Febucci.UI;
+﻿using Febucci.UI;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Util.EventHandleSystem;
@@ -17,18 +16,20 @@ namespace Util.UI
             if (e.IsMainPlayer)
             {
                 red.gameObject.SetActive(true);
-                DOVirtual.DelayedCall(1, () =>
+                red.StartShowingText();
+                red.onTextShowed.AddListener(() =>
                 {
-                    red.onTextDisappeared.AddListener(()=>red.gameObject.SetActive(false));
+                    red.onTextDisappeared.AddListener(() => red.gameObject.SetActive(false));
                     red.StartDisappearingText();
                 });
             }
             else
             {
                 blue.gameObject.SetActive(true);
-                DOVirtual.DelayedCall(1, () =>
+                blue.StartShowingText();
+                blue.onTextShowed.AddListener(() =>
                 {
-                    blue.onTextDisappeared.AddListener(()=>blue.gameObject.SetActive(false));
+                    blue.onTextDisappeared.AddListener(() => blue.gameObject.SetActive(false));
                     blue.StartDisappearingText();
                 });
             }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36450d0d0c9a49b2a0f3fee3fb7e515, type: 3}
   m_Name: BA385942-880F-4A31-842F-A70833EEAC20
   m_EditorClassIdentifier: 
-  objectName: Play_sfx_amb_bar
-  id: 1461565872
+  objectName: Play_sfx_amb_bar_ingame
+  id: 3282807380
   guid: BA385942-880F-4A31-842F-A70833EEAC20
   IsInUserDefinedSoundBank: 1
   IsAutoBankLoaded: 0
