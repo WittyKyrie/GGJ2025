@@ -25,6 +25,8 @@ namespace Player
         public void Drinking()
         {
             
+            //todo:处理酒精的问题
+            Debug.LogWarning("Drink");
         }
     }
 }

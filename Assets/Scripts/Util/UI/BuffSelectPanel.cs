@@ -3,6 +3,7 @@ using Febucci.UI;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
+using Util.EventHandleSystem;
 
 namespace Util.UI
 {
@@ -18,6 +19,17 @@ namespace Util.UI
         public TypewriterByCharacter blue;
 
         public SimpleUIAnimation simpleUIAnimation;
+
+        private void OnEnable()
+        {
+            QuickEvent.SubscribeListener<ShowSelectBuff>(ShowRedBck);
+            GameManager.Instance.ChangeState(GameState.PreAnimation);
+        }
+
+        private void OnDisable()
+        {
+            QuickEvent.UnsubscribeListener<ShowSelectBuff>(ShowRedBck);
+        }
 
         [Button]
         public void ShowMainPlayerSelect()
@@ -43,7 +55,7 @@ namespace Util.UI
                 {
                     simpleUIAnimation.DoDieAnimation().OnComplete(() =>
                     {
-                        GameManager.Instance.ChangeState(GameState.MainPlayerTurn);
+                        QuickEvent.DispatchMessage(new ShowPlayerTurnText(true));
                         gameObject.SetActive(false);
                     });
                 });
@@ -51,7 +63,7 @@ namespace Util.UI
         }
 
         [Button]
-        public void ShowRedBck()
+        public void ShowRedBck(ShowSelectBuff e)
         {
             gameObject.SetActive(true);
             btn.gameObject.SetActive(false);

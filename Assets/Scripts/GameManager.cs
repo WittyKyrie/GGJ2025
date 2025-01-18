@@ -1,10 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Util;
 using Util.EventHandleSystem;
 
 public enum GameState
 {
+    SplashScene,      // 开场前动画阶段
     PreAnimation,      // 开场前动画阶段
     SelectBuff,        // 抽卡牌阶段
     MainPlayerTurn,       // Player1操作阶段
@@ -30,7 +30,7 @@ public class GameManager : Singleton<GameManager>
         LoadBank("Bubble_Game");
         AkUnitySoundEngine.PostEvent(SoundEffects.OutGameAmbBar, gameObject);
         
-        ChangeState(GameState.PreAnimation);
+        ChangeState(GameState.SplashScene);
     }
     
     private void LoadBank(string bank)
@@ -78,13 +78,14 @@ public class GameManager : Singleton<GameManager>
             case GameState.SelectBuff:
                 HandleSelectBuff();
                 break;
-            default:
-                throw new ArgumentOutOfRangeException();
+            case GameState.SplashScene:
+                break;
         }
     }
 
     private void HandleSelectBuff()
     {
+        QuickEvent.DispatchMessage(new ShowSelectBuff());
         Debug.Log("选择界面");
     }
     
@@ -92,18 +93,18 @@ public class GameManager : Singleton<GameManager>
     {
         // 处理开场前动画
         Debug.LogWarning("开场动画");
-        ChangeState(GameState.Settlement);
+        ChangeState(GameState.SelectBuff);
     }
 
     private void HandlePlayer1Turn()
     {
-        QuickEvent.DispatchMessage(new ShowPlayerTurnText(true));
+        QuickEvent.DispatchMessage(new MainPlayerTurn());
         // 处理 Player1 操作
     }
 
     private void HandlePlayer2Turn()
     {
-        QuickEvent.DispatchMessage(new ShowPlayerTurnText(false));
+        QuickEvent.DispatchMessage(new SubPlayerTurn());
         // 处理 Player2 操作
     }
 
@@ -114,6 +115,8 @@ public class GameManager : Singleton<GameManager>
 
     private void HandleDrinking()
     {
+        mainPlayer.Drinking();
+        subPlayer.Drinking();
         // 处理喝酒阶段
     }
 
@@ -125,20 +128,5 @@ public class GameManager : Singleton<GameManager>
     private void HandlePause()
     {
         // 处理暂停阶段
-    }
-
-    public void TogglePause()
-    {
-        if (CurrentState != GameState.Pause)
-        {
-            ChangeState(GameState.Pause);
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-            // 恢复到之前的状态，这里以 Player1 操作阶段为例
-            ChangeState(GameState.MainPlayerTurn);
-        }
     }
 }

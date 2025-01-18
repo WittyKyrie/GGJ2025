@@ -10,4 +10,17 @@ namespace Util.EventHandleSystem
             IsMainPlayer = isMainPlayer;
         }
     }
+    
+    public struct ShowSelectBuff
+    {
+    }
+    
+    public struct MainPlayerTurn
+    {
+        
+    }
+    
+    public struct SubPlayerTurn
+    {
+    }
 }
