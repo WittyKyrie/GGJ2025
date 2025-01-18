@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ImprovedTimers;
 using Sirenix.OdinInspector;
@@ -5,16 +6,17 @@ using TimToolBox.DebugTool;
 using TimToolBox.Extensions;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Util.EventHandleSystem;
+using Random = UnityEngine.Random;
 
 public class BeerGlass : MonoBehaviour
 {
-    public GameObject foamPrefab;
     public Transform foamFloatLine;
     public Transform generationTransform;
     
     public float generationRandomAngle;
-    [FormerlySerializedAs("initialSpeed")] public float foamInitialSpeed;
-    [FormerlySerializedAs("generationBubbleThreshold")] public int formFoamThreshold;
+    public float foamInitialSpeed;
+    public int formFoamThreshold;
     
     public float foamLineHeight;
     public float foamLineHeightOffset;
@@ -27,21 +29,57 @@ public class BeerGlass : MonoBehaviour
     private BoxCollider2D boxCollider;
     
     [ReadOnly] public float flux = 0;
-    [ReadOnly] public float fluidCount = 0;
-    [ReadOnly] public float lastFluidCount = 0; 
+    [ReadOnly] public int fluidCount = 0;
+    [ReadOnly] public int generatedFoamCount = 0;
+    [ReadOnly] public float lastFluidCount = 0;
+
+    public int fullGlassMaxCount = 300;
+    public float volumePerFluid = 10;
+
+    private List<FoamParticle> foamParticle = new List<FoamParticle>();
     
     private void Awake()
     {
         layerMask = ~LayerMask.GetMask("FluidDetect", "Foam");
         timer = new CountdownTimer(calculationTimeFrame);
         boxCollider = GetComponent<BoxCollider2D>();
-        
+    }
+
+    private void OnEnable()
+    {
+        Reset();
+    }
+
+    private void OnDisable()
+    {
+        CleanUpParticle();
+    }
+
+    public void Reset()
+    {
         timer.Start();
+        lastFluidCount = 0;
+        generatedFoamCount = 0;
+        fluidCount = 0;
+    }
+
+    public float GetBeerVolumeResult()
+    {
+        return volumePerFluid * (fluidCount);
     }
     
+    public void CleanUpParticle()
+    {
+        foreach (var fp in foamParticle)
+        {
+            FoamParticlePool.Singleton.ReleaseFoamParticle(fp);
+        }
+        foamParticle.Clear();
+    }
+
     private void Update()
     {
-        if (timer.IsFinished)
+        if (timer.IsFinished && !IsGlassFull())
         {
             var newCount = fluidCount - lastFluidCount;
             flux = newCount / calculationTimeFrame;
@@ -50,6 +88,8 @@ public class BeerGlass : MonoBehaviour
             lastFluidCount = fluidCount;
             timer.Start();
         }
+        //泡泡后结算
+        if (CheckGlassFull()) { return; }
         
          //from the current float line, do a couple ray cast to sample the height of the fluid
          var origin = foamFloatLine.position.Offset(y:foamLineHeightOffset);
@@ -77,7 +117,21 @@ public class BeerGlass : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (IsGlassFull()) return;
         fluidCount += 1;
+        //加球后尝试结算
+        CheckGlassFull();
+    }
+
+    private bool CheckGlassFull()
+    {
+        var val = IsGlassFull();
+        if (val) { QuickEvent.DispatchMessage(new BeerIsFullEvent());}
+        return val;
+    }
+    public bool IsGlassFull()
+    {
+        return generatedFoamCount + fluidCount >= fullGlassMaxCount;
     }
     
     public void GenerateFoamParticle(int count)
@@ -86,14 +140,16 @@ public class BeerGlass : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             var genPos = generationTransform.position.Offset(x: Mathf.Lerp(-foamLineLength / 2f, foamLineLength / 2f, Random.Range(0f, 1f)));
-            GameObject fluid = Instantiate(foamPrefab, genPos, Quaternion.identity);
+
+            FoamParticle fp =FoamParticlePool.Singleton.GetFoamParticle();
+            fp.transform.position = genPos;
             var direction = generationTransform.up;
-            //rotate the direction by slight variation
             direction = Quaternion.AngleAxis(Random.Range(-generationRandomAngle, generationRandomAngle),Vector3.forward) * direction;
-            fluid.GetComponent<Rigidbody2D>().AddForce(direction * foamInitialSpeed, ForceMode2D.Impulse);
-            var fp = fluid.GetComponent<FoamParticle>();
+            fp.GetComponent<Rigidbody2D>().AddForce(direction * foamInitialSpeed, ForceMode2D.Impulse);
             fp.waterSurface = foamFloatLine;
             fp.beerGlass = this;
+            generatedFoamCount += 1;
+            if(CheckGlassFull()) return;
         }
     }
 

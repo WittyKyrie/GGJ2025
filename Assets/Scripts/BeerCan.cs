@@ -7,8 +7,7 @@ using UnityEngine.Serialization;
 
 public class BeerCan : MonoBehaviour
 {
-    public GameObject fluidPrefab;
-    [FormerlySerializedAs("dispensePosition")] public Transform dispenseTransform;
+    public Transform dispenseTransform;
     public float dispenseMultiplier;
     public AnimationCurve dispenseCurve;
 
@@ -26,6 +25,7 @@ public class BeerCan : MonoBehaviour
 
     public bool mirrored;
     
+    private List<GameObject> fluidParticle = new List<GameObject>();
     private void Start()
     {
         Reset();
@@ -35,13 +35,27 @@ public class BeerCan : MonoBehaviour
     {
         Reset();
     }
-
+    
+    private void OnDisable()
+    {
+        CleanUpParticle();
+    }
+    
     [Button]
     public void Reset()
     {
         rateCounter = 0;
         currentRotationAngle = 0;
         transform.rotation = Quaternion.Euler(0,0,0);
+    }
+
+    public void CleanUpParticle()
+    {
+        foreach (var fp in fluidParticle)
+        {
+            FluidParticlePool.Singleton.ReleaseFluidParticle(fp);
+        }
+        fluidParticle.Clear();
     }
 
     public void UnBindP1()
@@ -72,10 +86,6 @@ public class BeerCan : MonoBehaviour
         else if (state == InputReader.KeyState.Up) pouring = false;
     }
 
-    private float NormailizeMirrorValue(float value)
-    {
-        return mirrored? 360f - value: value;
-    }
     private void Update()
     {
         // Rotation logic
@@ -110,11 +120,13 @@ public class BeerCan : MonoBehaviour
         //create the fluid and shoot it out to the y direction of dispensePositiion
         for (int i = 0; i < count; i++)
         {
-            GameObject fluid = Instantiate(fluidPrefab, dispenseTransform.position, Quaternion.identity);
+            GameObject fluid =  FluidParticlePool.Singleton.GetFluidParticle();
+            fluid.transform.position = dispenseTransform.position;
             var direction = dispenseTransform.up;
             //rotate the direction by slight variation
             direction = Quaternion.AngleAxis(UnityEngine.Random.Range(-dispenseRandomAngle, dispenseRandomAngle),Vector3.forward) * direction;
             fluid.GetComponent<Rigidbody2D>().AddForce(direction * 10, ForceMode2D.Impulse);
+            fluidParticle.Add(fluid);
         }
     }
 }
