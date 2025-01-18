@@ -94,11 +94,11 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: b3855d273c31e7408df7353777ecaa52
     GuidInternal: 
-    m_lastTime: -8584644182709842954
+    m_lastTime: -8584644173272209767
     List:
-    - name: Play_sfx_amb_bar
+    - name: Play_sfx_amb_bar_ingame
       guid: 425938ba0f88314a842fa70833eeac20
-      id: 1461565872
+      id: 3282807380
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -106,10 +106,27 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: b3855d273c31e7408df7353777ecaa52
-      - ElementName: Play_sfx_amb_bar
+      - ElementName: Play_sfx_amb_bar_ingame
         ObjectType: 3
         guid: 425938ba0f88314a842fa70833eeac20
-      Path: Events/Default Work Unit/Play_sfx_amb_bar
+      Path: Events/Default Work Unit/Play_sfx_amb_bar_ingame
+      maxAttenuation: 0
+      maxDuration: 36.01066
+      minDuration: 36.01066
+    - name: Play_sfx_amb_bar_menu
+      guid: 3db9012b60d64d44833b7c30d12a7431
+      id: 2571413926
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b3855d273c31e7408df7353777ecaa52
+      - ElementName: Play_sfx_amb_bar_menu
+        ObjectType: 3
+        guid: 3db9012b60d64d44833b7c30d12a7431
+      Path: Events/Default Work Unit/Play_sfx_amb_bar_menu
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -170,7 +187,7 @@ MonoBehaviour:
     m_lastTime: -8584644182709770191
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000a0000000b000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

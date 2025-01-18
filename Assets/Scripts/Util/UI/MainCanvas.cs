@@ -1,5 +1,4 @@
-﻿using System;
-using DG.Tweening;
+﻿using DG.Tweening;
 using Febucci.UI;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -11,11 +10,6 @@ namespace Util.UI
     {
         public TypewriterByCharacter red;
         public TypewriterByCharacter blue;
-
-        private void OnEnable()
-        {
-            throw new NotImplementedException();
-        }
 
         [Button]
         public void ShowPlayerTurnText(ShowPlayerTurnText e)
