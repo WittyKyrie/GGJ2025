@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{71F05E94-AD84-49B3-A125-A4BE7FDB8D4C}",
     "Language": "SFX",
-    "Hash": "{7D2FCC07-9C75-10CF-CE00-9426C5A817C2}",
+    "Hash": "{38DFA2FE-AEF3-D7C3-4250-CF9EB59ECE0C}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Bubble_Game",
     "ShortName": "Bubble_Game",
     "Path": "Bubble_Game.bnk",
@@ -44,6 +44,9 @@
       "MediaRefs": [
        {
         "Id": "728729985"
+       },
+       {
+        "Id": "848912408"
        }
       ]
      },
@@ -55,6 +58,9 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
+        "Id": "728729985"
+       },
+       {
         "Id": "848912408"
        }
       ]
@@ -62,6 +68,6 @@
     ]
    }
   ],
-  "FileHash": "{B6C1A7B3-B951-5CCC-1142-A99CE9D26551}"
+  "FileHash": "{1B508F11-16DA-D265-D809-A3E3B22D2081}"
  }
 }
