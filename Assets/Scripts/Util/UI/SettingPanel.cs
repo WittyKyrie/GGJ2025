@@ -1,6 +1,6 @@
 ﻿using DG.Tweening;
+using MoreMountains.Tools;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Util.UI
 {
@@ -22,8 +22,13 @@ namespace Util.UI
 
         public void ChangeToHome()
         {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("SplashScene");
+            var mySettings = new MMAdditiveSceneLoadingManagerSettings
+            {
+                LoadingSceneName = "Loading",
+                EntryFadeDuration = 0.4f,
+                ExitFadeDuration = 0.4f
+            };
+            MMAdditiveSceneLoadingManager.LoadScene("SplashScene", mySettings);
         }
     }
 }

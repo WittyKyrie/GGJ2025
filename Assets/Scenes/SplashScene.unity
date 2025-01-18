@@ -665,9 +665,9 @@ MonoBehaviour:
         RemapRangeFalloff: {x: 0, y: 1}
         Owner: {fileID: 370622021}
         DebugActive: 0
-        LoadingSceneName: 
+        LoadingSceneName: Loading
         DestinationSceneName: MainScene
-        LoadingMode: 0
+        LoadingMode: 1
         Priority: 4
         InterpolateProgress: 1
         SecureLoad: 1

@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using MoreMountains.Tools;
+using UnityEngine;
 using Util.EventHandleSystem;
 
 namespace Util.UI
@@ -39,7 +39,13 @@ namespace Util.UI
 
         public void ReturnHome()
         {
-            SceneManager.LoadScene("SplashScene");
+            var mySettings = new MMAdditiveSceneLoadingManagerSettings
+            {
+                LoadingSceneName = "Loading",
+                EntryFadeDuration = 0.4f,
+                ExitFadeDuration = 0.4f
+            };
+            MMAdditiveSceneLoadingManager.LoadScene("SplashScene", mySettings);
         }
     }
 }

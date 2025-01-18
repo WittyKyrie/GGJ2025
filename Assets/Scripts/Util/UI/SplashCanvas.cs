@@ -1,4 +1,4 @@
-using MoreMountains.Feedbacks;
+using MoreMountains.Tools;
 using UnityEngine;
 
 namespace Util.UI
@@ -7,7 +7,13 @@ namespace Util.UI
     {
         public void StartGame()
         {
-            GetComponent<MMF_Player>().PlayFeedbacks();
+            var mySettings = new MMAdditiveSceneLoadingManagerSettings
+            {
+                LoadingSceneName = "Loading",
+                EntryFadeDuration = 0.4f,
+                ExitFadeDuration = 0.4f
+            };
+            MMAdditiveSceneLoadingManager.LoadScene("MainScene", mySettings);
         }
 
         public void AboutUs()
