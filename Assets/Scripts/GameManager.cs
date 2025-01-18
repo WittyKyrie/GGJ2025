@@ -72,7 +72,7 @@ public class GameManager : Singleton<GameManager>
 
     private void HandleSelectBuff()
     {
-        ChangeState(GameState.SelectBuff);
+        // ChangeState(GameState.SelectBuff);
     }
     
     private void HandlePreAnimation()
