@@ -68,8 +68,8 @@ namespace Util.UI
             gameObject.SetActive(true);
             btn.gameObject.SetActive(false);
             selectObj.gameObject.SetActive(false);
-            redBck.SetActive(true);
-            blueBck.SetActive(false);
+            redBck.SetActive(false);
+            blueBck.SetActive(true);
 
             red.gameObject.SetActive(true);
             red.StartShowingText();
@@ -90,8 +90,8 @@ namespace Util.UI
         {
             selectObj.gameObject.SetActive(false);
             btn.gameObject.SetActive(false);
-            redBck.SetActive(false);
-            blueBck.SetActive(true);
+            redBck.SetActive(true);
+            blueBck.SetActive(false);
 
             blue.gameObject.SetActive(true);
             blue.StartShowingText();

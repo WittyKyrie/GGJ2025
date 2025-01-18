@@ -38,6 +38,7 @@ public class BeerGlass : MonoBehaviour
 
     private List<FoamParticle> foamParticle = new List<FoamParticle>();
     [ReadOnly, ShowInInspector] private int currentTotalCount = 0;
+    private bool hasDispatchedFullEvent = false;
     
     private void Awake()
     {
@@ -62,6 +63,7 @@ public class BeerGlass : MonoBehaviour
         lastFluidCount = 0;
         generatedFoamCount = 0;
         fluidCount = 0;
+        hasDispatchedFullEvent = false; // 重置状态
     }
 
     public float GetBeerVolumeResult()
@@ -127,12 +129,14 @@ public class BeerGlass : MonoBehaviour
 
     private bool CheckGlassFull()
     {
-        var val = IsGlassFull();
-        if (val)
+        var isFull = IsGlassFull();
+        if (isFull && !hasDispatchedFullEvent) // 仅当未触发过事件时执行
         {
+            Debug.LogWarning("show");
             QuickEvent.DispatchMessage(new BeerIsFullEvent());
+            hasDispatchedFullEvent = true; // 标记事件已触发
         }
-        return val;
+        return isFull;
     }
     public bool IsGlassFull()
     {

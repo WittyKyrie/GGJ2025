@@ -32,8 +32,11 @@ namespace Util.UI
                 red.StartShowingText();
                 DOVirtual.DelayedCall(1, () =>
                 {
-                    red.onTextDisappeared.AddListener(() => red.gameObject.SetActive(false));
-                    GameManager.Instance.ChangeState(GameState.MainPlayerTurn);
+                    red.onTextDisappeared.AddListener(() =>
+                    {
+                        GameManager.Instance.ChangeState(GameState.MainPlayerTurn);
+                        red.gameObject.SetActive(false);
+                    });
                     red.StartDisappearingText();
                 });
             }
@@ -43,8 +46,11 @@ namespace Util.UI
                 blue.StartShowingText();
                 DOVirtual.DelayedCall(1, () =>
                 {
-                    blue.onTextDisappeared.AddListener(() => blue.gameObject.SetActive(false));
-                    GameManager.Instance.ChangeState(GameState.SubPlayerTurn);
+                    blue.onTextDisappeared.AddListener(() =>
+                    {
+                        GameManager.Instance.ChangeState(GameState.SubPlayerTurn);
+                        blue.gameObject.SetActive(false);
+                    });
                     blue.StartDisappearingText();
                 });
             }
