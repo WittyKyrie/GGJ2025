@@ -37,6 +37,7 @@ public class BeerGlass : MonoBehaviour
     public float volumePerFluid = 10;
 
     private List<FoamParticle> foamParticle = new List<FoamParticle>();
+    [ReadOnly, ShowInInspector] private int currentTotalCount = 0;
     
     private void Awake()
     {
@@ -79,6 +80,7 @@ public class BeerGlass : MonoBehaviour
 
     private void Update()
     {
+        currentTotalCount = generatedFoamCount + fluidCount;
         if (timer.IsFinished && !IsGlassFull())
         {
             var newCount = fluidCount - lastFluidCount;

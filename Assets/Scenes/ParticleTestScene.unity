@@ -982,6 +982,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3520107752179202143, guid: eb10f61656e2e8040b0af684c2db371a, type: 3}
+      propertyPath: formFoamThreshold
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3520107752179202143, guid: eb10f61656e2e8040b0af684c2db371a, type: 3}
+      propertyPath: fullGlassMaxCount
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3520107752179202143, guid: eb10f61656e2e8040b0af684c2db371a, type: 3}
+      propertyPath: calculationTimeFrame
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
