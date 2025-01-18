@@ -10,11 +10,59 @@
     "Type": "User",
     "GUID": "{71F05E94-AD84-49B3-A125-A4BE7FDB8D4C}",
     "Language": "SFX",
-    "Hash": "{38DFA2FE-AEF3-D7C3-4250-CF9EB59ECE0C}",
+    "Hash": "{4D16F00B-07D9-2203-8930-9BB4C1EBE614}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Bubble_Game",
     "ShortName": "Bubble_Game",
     "Path": "Bubble_Game.bnk",
     "Media": [
+     {
+      "Id": "89394556",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Funky (full version).wav",
+      "CachePath": "B5/{B504A840-C020-A500-052E-B677F6E307CA}.wem"
+     },
+     {
+      "Id": "213387009",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_amb_open_can.wav",
+      "CachePath": "B3/{B35DA80C-ECD0-1AD2-3A36-08E7C0F16F49}.wem"
+     },
+     {
+      "Id": "224071117",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_amb_cheer_beer.wav",
+      "CachePath": "67/{67A8B399-CF6A-F7B6-6F95-4B55391A0C61}.wem"
+     },
+     {
+      "Id": "394066986",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_click_star.wav",
+      "CachePath": "03/{036744EB-FB6F-F1C6-38F6-F332B64B379A}.wem"
+     },
+     {
+      "Id": "554855565",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Funky On.wav",
+      "CachePath": "62/{6293DB64-9012-CA52-0A50-8332D862174A}.wem"
+     },
+     {
+      "Id": "636996577",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "1.wav",
+      "CachePath": "D1/{D116F5D4-CD29-2B58-80E5-8E9A40850866}.wem"
+     },
      {
       "Id": "728729985",
       "Language": "SFX",
@@ -24,15 +72,72 @@
       "CachePath": "4E/{4E99FD01-F39E-85E0-C8F9-E18D8DA0E163}.wem"
      },
      {
+      "Id": "759721876",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx_amb_pour_beer.wav",
+      "CachePath": "38/{3857B438-90B9-6F6B-AC17-3E4265C16F1F}.wem"
+     },
+     {
       "Id": "848912408",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "sfx_amb_bar_menu.wav",
-      "CachePath": "74/{74F23154-539C-0034-7508-A823FBBC8FA5}.wem"
+      "CachePath": "C5/{C562DF16-BADF-95B4-9D53-044DC728A96A}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "320964441",
+       "Name": "Silence",
+       "ObjectPath": "\\Actor-Mixer Hierarchy\\Default Work Unit\\Bubble_Game\\Menu\\sfx_amb_bar_menu\\sfx_amb_stinger\\10s_Cooldown\\Silence",
+       "GUID": "{4662913A-8EBF-4680-8182-CFCA153EDEDA}",
+       "LibName": "Wwise Silence",
+       "LibId": "6619138"
+      }
+     ]
+    },
     "Events": [
+     {
+      "Id": "2167428848",
+      "Name": "Play_bgm_ingame",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_bgm_ingame",
+      "GUID": "{A6330103-6062-4E0F-9FD3-B93C3E3D6106}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "89394556"
+       },
+       {
+        "Id": "213387009"
+       },
+       {
+        "Id": "224071117"
+       },
+       {
+        "Id": "554855565"
+       },
+       {
+        "Id": "636996577"
+       },
+       {
+        "Id": "759721876"
+       },
+       {
+        "Id": "848912408"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "320964441"
+        }
+       ]
+      }
+     },
      {
       "Id": "3282807380",
       "Name": "Play_sfx_amb_bar_ingame",
@@ -58,16 +163,55 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
+        "Id": "89394556"
+       },
+       {
+        "Id": "213387009"
+       },
+       {
+        "Id": "224071117"
+       },
+       {
+        "Id": "554855565"
+       },
+       {
+        "Id": "636996577"
+       },
+       {
         "Id": "728729985"
        },
        {
+        "Id": "759721876"
+       },
+       {
         "Id": "848912408"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "320964441"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1695911055",
+      "Name": "Play_sfx_click_start",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_sfx_click_start",
+      "GUID": "{29D84858-C572-4DFC-A1DA-A7884E271D35}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.1818366",
+      "DurationMax": "5.1818366",
+      "MediaRefs": [
+       {
+        "Id": "394066986"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{1B508F11-16DA-D265-D809-A3E3B22D2081}"
+  "FileHash": "{4695A8E4-09E3-942A-A34A-374171FB4DF5}"
  }
 }

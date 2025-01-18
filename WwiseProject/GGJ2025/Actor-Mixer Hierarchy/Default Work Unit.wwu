@@ -62,24 +62,11 @@
 										<ActiveSource Name="sfx_amb_bar" ID="{F4B1DB2F-1006-4396-9C29-2585E5EB18DF}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-							</ChildrenList>
-						</ActorMixer>
-						<ActorMixer Name="Menu" ID="{F139FB78-D353-48DB-B76E-9C90CEA1E2A5}" ShortID="909395185">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="sfx_amb_bar_menu" ID="{5D60D757-8202-4D62-B518-09C0E24532B7}" ShortID="630161740">
+								<RandomSequenceContainer Name="bgm_ingame" ID="{577C62C9-1409-4B0C-81A7-A39DFD1A24D0}" ShortID="562988157">
 									<PropertyList>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-13</Value>
+												<Value>-14</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -92,16 +79,287 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="sfx_amb_bar_menu" ID="{2F8BC59D-BF91-4A8F-926C-098A66B468F7}">
+										<Sound Name="bgm_ingame_1" ID="{E85EA3E7-EC5B-45CF-9194-37D1812BE8F8}" ShortID="20167798">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="1" ID="{0C6E2C46-CABE-4883-862E-4AC15F2DF0F5}">
+													<Language>SFX</Language>
+													<AudioFile>1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="636996577"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="1" ID="{0C6E2C46-CABE-4883-862E-4AC15F2DF0F5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="bgm_ingame_3" ID="{0038B3CF-CA2C-4B33-839A-7FB05F69D6BE}" ShortID="470602483">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Funky On" ID="{9F88EB74-3AFE-419C-962C-44C93FF2F6D8}">
+													<Language>SFX</Language>
+													<AudioFile>Funky On.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="554855565"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Funky On" ID="{9F88EB74-3AFE-419C-962C-44C93FF2F6D8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="bgm_ingame_2" ID="{BF0A54A2-353A-4FEF-B5AF-4AF08B4A3BFB}" ShortID="915798098">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Funky (full version)" ID="{66BA49DD-A92A-4E03-BC1A-607D58366084}">
+													<Language>SFX</Language>
+													<AudioFile>Funky (full version).wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="89394556"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Funky (full version)" ID="{66BA49DD-A92A-4E03-BC1A-607D58366084}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Menu" ID="{F139FB78-D353-48DB-B76E-9C90CEA1E2A5}" ShortID="909395185">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="sfx_amb_bar_menu" ID="{97F6866D-47F2-43B5-B271-EEB68ED07CE0}" ShortID="995803480">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="sfx_amb_bar_menu" ID="{5D60D757-8202-4D62-B518-09C0E24532B7}" ShortID="630161740">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sfx_amb_bar_menu" ID="{FE99707B-5470-4A35-B7F8-E24D71EE9776}">
+													<Language>SFX</Language>
+													<AudioFile>sfx_amb_bar_menu.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="848912408"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sfx_amb_bar_menu" ID="{FE99707B-5470-4A35-B7F8-E24D71EE9776}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<RandomSequenceContainer Name="sfx_amb_stinger" ID="{4BDDBA4E-BE51-422D-8AAB-8D7E3C2599D8}" ShortID="769288214">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ValueList>
+														<Value>3</Value>
+													</ValueList>
+												</Property>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+												<Property Name="RestartBeginningOrBackward" Type="int16" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="sfx_amb_stinger" ID="{AA7924BE-071A-4FF9-A088-AFDA454D9D0C}" ShortID="1024182525">
+													<PropertyList>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="sfx_amb_cheer_beer" ID="{050A2BD4-EFDA-40D3-A1D3-0D03E9D10737}" ShortID="253685834">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="sfx_amb_cheer_beer" ID="{224EBC0E-7D28-4D88-AA44-94808D5572FA}">
+																	<Language>SFX</Language>
+																	<AudioFile>sfx_amb_cheer_beer.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="224071117"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="sfx_amb_cheer_beer" ID="{224EBC0E-7D28-4D88-AA44-94808D5572FA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="sfx_amb_open_can" ID="{631BA04F-192B-4336-A369-734E9F88BB49}" ShortID="282944734">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="sfx_amb_open_can" ID="{7BD15BE6-9C58-4F1A-A04E-F6821DDD238D}">
+																	<Language>SFX</Language>
+																	<AudioFile>sfx_amb_open_can.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="213387009"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="sfx_amb_open_can" ID="{7BD15BE6-9C58-4F1A-A04E-F6821DDD238D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="sfx_amb_pour_beer" ID="{8E1DFE42-93B3-4881-AE54-04CF79D7AD57}" ShortID="32039943">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="sfx_amb_pour_beer" ID="{876373BD-E75C-4D7D-A958-FCF26634DEA1}">
+																	<Language>SFX</Language>
+																	<AudioFile>sfx_amb_pour_beer.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="759721876"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="sfx_amb_pour_beer" ID="{876373BD-E75C-4D7D-A958-FCF26634DEA1}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<Sound Name="10s_Cooldown" ID="{E25C85D1-2DA8-4A24-B094-C426782408F7}" ShortID="674418588">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<SourcePlugin Name="Silence" ID="{4662913A-8EBF-4680-8182-CFCA153EDEDA}" ShortID="320964441" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+															<PropertyList>
+																<Property Name="Length" Type="Real32" Value="10"/>
+															</PropertyList>
+															<Language>SFX</Language>
+														</SourcePlugin>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Silence" ID="{4662913A-8EBF-4680-8182-CFCA153EDEDA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Playlist">
+													<Reference>
+														<ObjectRef Name="sfx_amb_stinger" ID="{AA7924BE-071A-4FF9-A088-AFDA454D9D0C}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+													</Reference>
+													<Reference>
+														<ObjectRef Name="10s_Cooldown" ID="{E25C85D1-2DA8-4A24-B094-C426782408F7}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</RandomSequenceContainer>
+									</ChildrenList>
+								</BlendContainer>
+								<Sound Name="sfx_click_start" ID="{2FA711EC-9A60-4046-8EE2-B6423E6456E2}" ShortID="121142775">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{67A7699D-CE05-4B07-885A-831838959251}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A190ACD9-A729-4F1F-A239-E15A431BD79C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_click_star" ID="{19F13449-3AB9-4B76-ABDE-B4FD3CB6D2D4}">
 											<Language>SFX</Language>
-											<AudioFile>sfx_amb_bar_menu.wav</AudioFile>
+											<AudioFile>sfx_click_star.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="848912408"/>
+												<MediaID ID="394066986"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="sfx_amb_bar_menu" ID="{2F8BC59D-BF91-4A8F-926C-098A66B468F7}" Platform="Linked"/>
+										<ActiveSource Name="sfx_click_star" ID="{19F13449-3AB9-4B76-ABDE-B4FD3CB6D2D4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
