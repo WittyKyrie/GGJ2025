@@ -9,7 +9,7 @@ namespace Util.UI
     public class Clock : MonoBehaviour
     {
         public GameObject img;
-        [SerializeField] private int countdownTime = 10; // 倒计时的秒数
+        [SerializeField] private int countdownTime = 15; // 倒计时的秒数
         [SerializeField] private TMP_Text countdownText; // TextMeshPro组件，用于显示倒计时
 
         private Coroutine _countdownCoroutine;
@@ -48,7 +48,7 @@ namespace Util.UI
                 StopCoroutine(_countdownCoroutine); // 如果之前有倒计时，先停止
             }
 
-            countdownTime = 10;
+            countdownTime = 15;
             img.SetActive(true);
             _onCountdownEnd = onCountdownEnd;
             _countdownCoroutine = StartCoroutine(CountdownRoutine(onCountdownEnd));
