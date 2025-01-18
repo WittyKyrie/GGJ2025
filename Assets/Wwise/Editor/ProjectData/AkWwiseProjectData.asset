@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: b3855d273c31e7408df7353777ecaa52
     GuidInternal: 
-    m_lastTime: -8584644127312250132
+    m_lastTime: -8584643936255429476
     List:
+    - name: Play_bgm_ingame
+      guid: 030133a662600f4e9fd3b93c3e3d6106
+      id: 2167428848
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b3855d273c31e7408df7353777ecaa52
+      - ElementName: Play_bgm_ingame
+        ObjectType: 3
+        guid: 030133a662600f4e9fd3b93c3e3d6106
+      Path: Events\Default Work Unit\Play_bgm_ingame
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_sfx_amb_bar_ingame
       guid: 425938ba0f88314a842fa70833eeac20
       id: 3282807380
@@ -130,6 +147,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Play_sfx_click_start
+      guid: 5848d82972c5fc4da1daa7884e271d35
+      id: 1695911055
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b3855d273c31e7408df7353777ecaa52
+      - ElementName: Play_sfx_click_start
+        ObjectType: 3
+        guid: 5848d82972c5fc4da1daa7884e271d35
+      Path: Events\Default Work Unit\Play_sfx_click_start
+      maxAttenuation: 0
+      maxDuration: 5.1818366
+      minDuration: 5.1818366
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

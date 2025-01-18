@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Buff;
+using UnityEngine;
 using Util;
 using Util.EventHandleSystem;
 
@@ -18,6 +19,7 @@ public class GameManager : Singleton<GameManager>
 {
     public Player.Player mainPlayer;
     public Player.Player subPlayer;
+    public BuffDataInfo buffDataInfo;
     
     private GameState CurrentState { get; set; }
 

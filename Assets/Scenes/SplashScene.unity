@@ -1441,6 +1441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainPlayer: {fileID: 0}
   subPlayer: {fileID: 0}
+  buffDataInfo: {fileID: 11400000, guid: 18708f2aa8dd2e146b83dab23287afc9, type: 2}
 --- !u!114 &1607782876
 MonoBehaviour:
   m_ObjectHideFlags: 0
