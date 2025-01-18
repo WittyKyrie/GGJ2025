@@ -58,7 +58,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_amb_bar_menu" ID="{5D60D757-8202-4D62-B518-09C0E24532B7}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+									<ObjectRef Name="sfx_amb_bar_menu" ID="{97F6866D-47F2-43B5-B271-EEB68ED07CE0}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -66,7 +66,21 @@
 				</Event>
 				<Event Name="Play_bgm_ingame" ID="{A6330103-6062-4E0F-9FD3-B93C3E3D6106}">
 					<ChildrenList>
+						<Action Name="" ID="{6B00BFEB-6F26-471A-A562-4CE79F4A5314}" ShortID="262899273">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_amb_bar_menu" ID="{97F6866D-47F2-43B5-B271-EEB68ED07CE0}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{6164DB57-3D8A-4182-88BE-57DEE7DC0455}" ShortID="240106671">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="bgm_ingame" ID="{577C62C9-1409-4B0C-81A7-A39DFD1A24D0}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
