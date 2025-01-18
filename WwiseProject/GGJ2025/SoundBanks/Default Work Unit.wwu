@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{33ABA417-613B-45F8-AC8A-AF6FF7700FE0}" SchemaVersion="123">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{33ABA417-613B-45F8-AC8A-AF6FF7700FE0}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{33ABA417-613B-45F8-AC8A-AF6FF7700FE0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Bubble_Game" ID="{71F05E94-AD84-49B3-A125-A4BE7FDB8D4C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Cut_Sence" ID="{6B11080A-41B8-4425-8BFB-B1C786A59A98}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="In_Game" ID="{414CE6DB-E987-47E5-9228-E17DA623B55D}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Menu" ID="{F139FB78-D353-48DB-B76E-9C90CEA1E2A5}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

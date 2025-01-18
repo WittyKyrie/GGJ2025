@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{275D85B3-313C-40E7-8DF7-353777ECAA52}" SchemaVersion="123">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{275D85B3-313C-40E7-8DF7-353777ECAA52}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{275D85B3-313C-40E7-8DF7-353777ECAA52}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_sfx_amb_bar" ID="{BA385942-880F-4A31-842F-A70833EEAC20}">
+					<ChildrenList>
+						<Action Name="" ID="{EB966242-7191-4BAB-ACFF-281E48BFA87E}" ShortID="299799793">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_amb_bar" ID="{A439B500-9EB9-4A0C-AD5D-F916100DEFB1}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
