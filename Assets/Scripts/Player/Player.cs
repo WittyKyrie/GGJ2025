@@ -16,6 +16,8 @@ namespace Player
         public List<Buff.Buff> Buffs = new(); //道具列表
         public MMProgressBar bar;
         public PlayerBuffList playerBuffList;
+        public BeerGlass beerGlass;
+        public BeerCan beerCan;
 
         private void Awake()
         {
@@ -60,12 +62,15 @@ namespace Player
 
             if (isMainPlayer)
             {
-                Debug.LogWarning("倒酒");
-                //todo:允许倒酒的操作
+                beerGlass.gameObject.SetActive(false);
+                beerCan.gameObject.SetActive(true);
+                beerCan.BindP1();
             }
             else
             {
-                //todo:允许接酒的操作
+                beerGlass.gameObject.SetActive(true);
+                beerCan.gameObject.SetActive(false);
+                beerCan.UnBindP1();
             }
         }
 
@@ -76,11 +81,15 @@ namespace Player
 
             if (!isMainPlayer)
             {
-                //todo:允许倒酒的操作
+                beerGlass.gameObject.SetActive(false);
+                beerCan.gameObject.SetActive(true);
+                beerCan.BindP2();
             }
             else
             {
-                //todo:允许接酒的操作
+                beerGlass.gameObject.SetActive(true);
+                beerCan.gameObject.SetActive(false);
+                beerCan.UnBindP2();
             }
         }
 

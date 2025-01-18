@@ -31,6 +31,11 @@ public class BeerCan : MonoBehaviour
         Reset();
     }
 
+    private void OnEnable()
+    {
+        Reset();
+    }
+
     [Button]
     public void Reset()
     {
@@ -39,16 +44,25 @@ public class BeerCan : MonoBehaviour
         transform.rotation = Quaternion.Euler(0,0,0);
     }
 
+    public void UnBindP1()
+    {
+        InputReader.Instance.OnP1PourKeyInput -= OnPourKeyInput;
+    }
+    public void UnBindP2()
+    {
+        InputReader.Instance.OnP2PourKeyInput -= OnPourKeyInput;
+    }
     [Button]
     public void BindP1()
     {
-        mirrored = false;
+        mirrored = true;
         InputReader.Instance.OnP1PourKeyInput += OnPourKeyInput;
     }
+    
     [Button]
     public void BindP2()
     {
-        mirrored = true;
+        mirrored = false;
         InputReader.Instance.OnP2PourKeyInput += OnPourKeyInput;
     }
     
