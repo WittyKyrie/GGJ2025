@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fluidPrefab: {fileID: 6465786025261860976, guid: 66c4e31fed20c2f42a21e3a90bc4135b, type: 3}
   dispenseTransform: {fileID: 1863790645260207652}
-  dispenseMultiplier: 5
+  dispenseMultiplier: 10
   dispenseCurve:
     serializedVersion: 2
     m_Curve:
