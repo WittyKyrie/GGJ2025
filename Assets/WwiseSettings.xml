@@ -1,9 +1,21 @@
 <?xml version='1.0'?>
 <WwiseSettings>
-    <WwiseProjectPath>../../../../Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/WwiseProjects/GGJ2025/GGJ2025.wproj</WwiseProjectPath>
+    <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
+    <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
     <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
+    <CreatedPicker>true</CreatedPicker>
     <CreateWwiseGlobal>true</CreateWwiseGlobal>
     <CreateWwiseListener>true</CreateWwiseListener>
-    <WwiseInstallationPathWindows></WwiseInstallationPathWindows>
+    <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
+    <LoadSoundEngineInEditMode>true</LoadSoundEngineInEditMode>
+    <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
+    <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
     <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise2024.1.1.8691/Wwise.app</WwiseInstallationPathMac>
+    <WwiseInstallationPathWindows></WwiseInstallationPathWindows>
+    <WwiseProjectPath>../../GGJ2025/WwiseProject/GGJ2025/GGJ2025.wproj</WwiseProjectPath>
+    <UseWaapi>true</UseWaapi>
+    <WaapiPort>8080</WaapiPort>
+    <WaapiIP>127.0.0.1</WaapiIP>
+    <XMLTranslatorTimeout>0</XMLTranslatorTimeout>
+    <WaapiTranslatorTimeout>0</WaapiTranslatorTimeout>
 </WwiseSettings>
