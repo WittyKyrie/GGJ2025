@@ -21,7 +21,7 @@ public class FoamParticle : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         transform.localScale = Vector3.zero;
-        transform.DOScale(1f, 1f);
+        transform.DOScale(0.8f, 2f);
     }
 
     private void FixedUpdate()

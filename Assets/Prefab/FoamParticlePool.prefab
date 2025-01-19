@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foamParticlePrefab: {fileID: 2141952674135571470, guid: 8090ecc5b983e7b478e71230a0104fc6, type: 3}
-  defaultCapacity: 300
-  maxSize: 300
+  defaultCapacity: 500
+  maxSize: 500

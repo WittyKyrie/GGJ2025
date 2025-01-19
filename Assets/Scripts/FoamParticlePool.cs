@@ -43,7 +43,7 @@ public class FoamParticlePool : MonoBehaviour
     // Action when an object is returned to the pool
     private void OnReleaseFoamParticle(FoamParticle foamParticle)
     {
-        foamParticle.gameObject.SetActive(false); // Deactivate the object
+        foamParticle?.gameObject.SetActive(false); // Deactivate the object
     }
 
     // Action when an object is destroyed

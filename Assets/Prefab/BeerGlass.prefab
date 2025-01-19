@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 912597050995969067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.18, y: 0, z: 0}
+  m_LocalPosition: {x: 2.27, y: 0, z: 0}
   m_LocalScale: {x: 0.55832714, y: 5.3298273, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -117,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.2715519, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9003786, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1736536634591602403
 GameObject:
@@ -182,19 +182,19 @@ MonoBehaviour:
   generationTransform: {fileID: 3309148452784941392}
   generationRandomAngle: 30
   foamInitialSpeed: 1
-  formFoamThreshold: 25
   foamLineHeight: 5
   foamLineHeightOffset: 0.25
   foamLineLength: 4
   sampleCount: 10
   calculationTimeFrame: 0.2
   layerMask: 0
-  flux: 0
-  fluidCount: 0
-  generatedFoamCount: 0
-  lastFluidCount: 0
   fullGlassMaxCount: 500
   volumePerFluid: 10
+  foamFormingInfluxMin: 30
+  airMultiplierPerExtraInflux: 1
+  generatedFoamCount: 0
+  fluidCount: 0
+  lastFluidCount: 0
 --- !u!61 &907979883817579420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ Transform:
   m_GameObject: {fileID: 2371308399412354880}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.23, y: 0, z: 0}
+  m_LocalPosition: {x: -2.06, y: 0, z: 0}
   m_LocalScale: {x: 0.7112782, y: 5.3298273, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -357,7 +357,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.2063928, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -368,7 +368,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5872144, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &4177421973808662470
 GameObject:
@@ -668,7 +668,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.04108879, y: 0.0867441}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -679,5 +679,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.7799985, y: 0.8265118}
   m_EdgeRadius: 0

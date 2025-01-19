@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Collections.Generic;
 using ImprovedTimers;
 using Sirenix.OdinInspector;
@@ -16,7 +16,6 @@ public class BeerGlass : MonoBehaviour
     
     public float generationRandomAngle;
     public float foamInitialSpeed;
-    public int formFoamThreshold;
     
     public float foamLineHeight;
     public float foamLineHeightOffset;
@@ -25,25 +24,31 @@ public class BeerGlass : MonoBehaviour
     
     public float calculationTimeFrame;
     public int layerMask;
-    private CountdownTimer timer = new CountdownTimer(0.1f);
+    private CountdownTimer checkInfluxTimer = new CountdownTimer(1f);
     private BoxCollider2D boxCollider;
     
-    [ReadOnly] public float flux = 0;
-    [ReadOnly] public int fluidCount = 0;
-    [ReadOnly] public int generatedFoamCount = 0;
-    [ReadOnly] public float lastFluidCount = 0;
 
     public int fullGlassMaxCount = 300;
     public float volumePerFluid = 10;
 
     private List<FoamParticle> foamParticle = new List<FoamParticle>();
-    [ReadOnly, ShowInInspector] private int currentTotalCount = 0;
     private bool hasDispatchedFullEvent = false;
+
+    [BoxGroup("Foam")] public int foamFormingInfluxMin;
+    [BoxGroup("Foam")] public float airMultiplierPerExtraInflux;
+
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _influx = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _remainFlux = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _airCount = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private int _currentTotalCount = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] public int generatedFoamCount = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] public int fluidCount = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] public float lastFluidCount = 0;
     
     private void Awake()
     {
         layerMask = ~LayerMask.GetMask("FluidDetect", "Foam");
-        timer = new CountdownTimer(calculationTimeFrame);
+        checkInfluxTimer = new CountdownTimer(calculationTimeFrame);
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -59,7 +64,7 @@ public class BeerGlass : MonoBehaviour
 
     public void Reset()
     {
-        timer.Start();
+        checkInfluxTimer.Start();
         lastFluidCount = 0;
         generatedFoamCount = 0;
         fluidCount = 0;
@@ -82,15 +87,22 @@ public class BeerGlass : MonoBehaviour
 
     private void Update()
     {
-        currentTotalCount = generatedFoamCount + fluidCount;
-        if (timer.IsFinished && !IsGlassFull())
+        _currentTotalCount = generatedFoamCount + fluidCount;
+        if (checkInfluxTimer.IsFinished && !IsGlassFull())
         {
-            var newCount = fluidCount - lastFluidCount;
-            flux = newCount / calculationTimeFrame;
-            var genCount = Mathf.FloorToInt(flux / formFoamThreshold);
-            GenerateFoamParticle(genCount);
+            var newFluidCount = fluidCount - lastFluidCount;
+            _influx = newFluidCount / calculationTimeFrame;
+            _remainFlux = Mathf.Max(0, _influx - (foamFormingInfluxMin));
+            var air = _remainFlux * airMultiplierPerExtraInflux * calculationTimeFrame;
+            _airCount += air;
+            if (_airCount >= 1)
+            {
+                var count = Mathf.FloorToInt(_airCount);
+                _airCount -= count;
+                GenerateFoamParticle(count);
+            }
             lastFluidCount = fluidCount;
-            timer.Start();
+            checkInfluxTimer.Start();
         }
         //泡泡后结算
         if (CheckGlassFull()) { return; }

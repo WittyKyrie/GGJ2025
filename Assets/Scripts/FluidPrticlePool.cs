@@ -46,7 +46,7 @@ public class FluidParticlePool : MonoBehaviour
     // Action when an object is returned to the pool
     private void OnReleaseFluidParticle(GameObject fluidParticle)
     {
-        fluidParticle.SetActive(false); // Deactivate the object
+        fluidParticle?.SetActive(false); // Deactivate the object
     }
 
     // Action when an object is destroyed

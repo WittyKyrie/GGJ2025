@@ -2,33 +2,43 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using TimToolBox.DebugTool;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class BeerCan : MonoBehaviour
 {
     public Transform dispenseTransform;
-    public float dispenseMultiplier;
-    public AnimationCurve dispenseCurve;
-
     public float dispenseRandomAngle;
-    [ReadOnly, ShowInInspector] private float dispenseRate;
-    private float rateCounter;
+    [BoxGroup("Disperse")]public Vector3 dispenseAngleThresholds; //x = min, y = perfect, z = max
     
-    private bool pouring = false;
-    private float currentRotationAngle;
-    
-    public float pourRotationSpeed;
-    public float backtrackRotationSpeed;
-    public Vector2 rotationRange;
-    public float dispenseMinAngle;
+    [BoxGroup("Pour")] public Vector2 pourRotationAccelerationRange;
+    [BoxGroup("Pour")] public float pourRotationAccelerationMult;
+    [BoxGroup("Pour")] public float particleInitVelocity;
+    [FormerlySerializedAs("pourRotationAccelerationMultCurve")] [BoxGroup("Pour")] public AnimationCurve pourRotationAccelerationAmpCurve;
+    [BoxGroup("BackTrack")] public float backtrackRotationAcceleration;
+    [BoxGroup("Range")]public Vector2 rotationRange;
+    [BoxGroup("Range")]public Vector2 rotationSpeedRange;
 
     public bool mirrored;
+    public bool autoBindP1;
+    public bool autoBindP2;
     
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private bool _pouring = false;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _pouringTimerCount = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _currentRotationAngle;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _currentRotationSpeed;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _currentAcceleration;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _ballPerSecond = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _rateCounter = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _dispenseRate = 0;
     private List<GameObject> fluidParticle = new List<GameObject>();
     private void Start()
     {
         Reset();
+        if(autoBindP1) BindP1();
+        if(autoBindP2) BindP2();
     }
 
     private void OnEnable()
@@ -44,8 +54,9 @@ public class BeerCan : MonoBehaviour
     [Button]
     public void Reset()
     {
-        rateCounter = 0;
-        currentRotationAngle = 0;
+        _rateCounter = 0;
+        _currentRotationAngle = 0;
+        _currentRotationSpeed = 0;
         transform.rotation = Quaternion.Euler(0,0,0);
     }
 
@@ -82,34 +93,55 @@ public class BeerCan : MonoBehaviour
     
     private void OnPourKeyInput(InputReader.KeyState state)
     {
-        if (state == InputReader.KeyState.Down) pouring = true;
-        else if (state == InputReader.KeyState.Up) pouring = false;
+        if (state == InputReader.KeyState.Down) _pouring = true;
+        else if (state == InputReader.KeyState.Up) _pouring = false;
     }
 
     private void Update()
     {
         // Rotation logic
-        var rotationSpeed = pouring ? pourRotationSpeed : backtrackRotationSpeed;
-        rotationSpeed *= mirrored ? -1 : 1; 
-        currentRotationAngle += rotationSpeed * Time.deltaTime;
-        // Constrain rotation within rotationRange
-        if(mirrored) currentRotationAngle = Mathf.Clamp(currentRotationAngle, -rotationRange.y, rotationRange.x);
-        else currentRotationAngle = Mathf.Clamp(currentRotationAngle, (rotationRange.x), (rotationRange.y));
+        {
+            //handle change of acceleration
+            _pouringTimerCount = _pouring ? _pouringTimerCount + Time.deltaTime * pourRotationAccelerationMult : 0;
+            _currentAcceleration = Mathf.Clamp01(_pouringTimerCount);
+            _currentAcceleration = Mathf.Lerp(pourRotationAccelerationRange.x, pourRotationAccelerationRange.y,pourRotationAccelerationAmpCurve.Evaluate(Mathf.Clamp01(_pouringTimerCount)));
+            
+            //handle change of rotationSpeed
+            var rotationSpeedDelta = _pouring ? _currentAcceleration : backtrackRotationAcceleration;
+            if (Mathf.Abs(_currentRotationAngle) >= rotationRange.y) _currentRotationSpeed = 0;
+            if (Mathf.Abs(_currentRotationAngle) <= rotationRange.x) _currentRotationSpeed = 0;
+            _currentRotationSpeed += rotationSpeedDelta * Time.deltaTime;
+            _currentRotationSpeed = Mathf.Clamp(_currentRotationSpeed, rotationSpeedRange.x, rotationSpeedRange.y);
+            
+            //handle change of rotationAngle
+            var rotationSpeed = _currentRotationSpeed;
+            rotationSpeed *= mirrored ? -1 : 1; 
+            _currentRotationAngle += rotationSpeed * Time.deltaTime;
+            // Constrain rotation within rotationRange
+            if (mirrored) _currentRotationAngle = Mathf.Clamp(_currentRotationAngle, -rotationRange.y, rotationRange.x);
+            else _currentRotationAngle = Mathf.Clamp(_currentRotationAngle, (rotationRange.x), (rotationRange.y));
         
-        transform.localRotation = Quaternion.Euler(0f, 0f, currentRotationAngle); // Change axis as needed
+            transform.localRotation = Quaternion.Euler(0f, 0f, _currentRotationAngle); // Change axis as needed
+        }
         
-        //get the rotation of z axis and set it as dispense rate
-        var ratio = Mathf.Abs(currentRotationAngle - rotationRange.x) / Mathf.Abs(rotationRange.y - rotationRange.x);
-        dispenseRate = dispenseCurve.Evaluate(ratio) * dispenseMultiplier;
         
         //dispense logic
-        if (Mathf.Abs(currentRotationAngle) > (dispenseMinAngle))
+        _dispenseRate = 0;
+        var abs = Mathf.Abs(_currentRotationAngle);
+        //y = 0.05(x-90)^{2}
+        if (abs > (dispenseAngleThresholds.x) && abs < (dispenseAngleThresholds.y))
+            _dispenseRate = 0.033333f * Mathf.Pow(abs - dispenseAngleThresholds.x, 2);
+        //y = (x-110)+20
+        if (abs >= (dispenseAngleThresholds.y))
+            _dispenseRate = 0.75f * (abs - dispenseAngleThresholds.y) + 30f;
+        
+        if (_dispenseRate > 0)
         {
-            rateCounter += Time.deltaTime * dispenseRate * dispenseMultiplier;
-            if (rateCounter >= 1)
+            _rateCounter += Time.deltaTime * _dispenseRate;
+            if (_rateCounter >= 1)
             {
-                var count = Mathf.FloorToInt(rateCounter);
-                rateCounter -= count;
+                var count = Mathf.FloorToInt(_rateCounter);
+                _rateCounter -= count;
                 DispenseFluidParticle(count);
             }
         }
@@ -125,8 +157,18 @@ public class BeerCan : MonoBehaviour
             var direction = dispenseTransform.up;
             //rotate the direction by slight variation
             direction = Quaternion.AngleAxis(UnityEngine.Random.Range(-dispenseRandomAngle, dispenseRandomAngle),Vector3.forward) * direction;
-            fluid.GetComponent<Rigidbody2D>().AddForce(direction * 10, ForceMode2D.Impulse);
+            fluid.GetComponent<Rigidbody2D>().AddForce(direction * particleInitVelocity, ForceMode2D.Impulse);
             fluidParticle.Add(fluid);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, transform.position + Quaternion.AngleAxis((mirrored? -1 : 1) * dispenseAngleThresholds.x, Vector3.forward) * (mirrored? Vector3.left : Vector3.right) * 2f);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, transform.position + Quaternion.AngleAxis((mirrored? -1 : 1) * dispenseAngleThresholds.y, Vector3.forward) * (mirrored? Vector3.left : Vector3.right) * 2f);
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Quaternion.AngleAxis((mirrored? -1 : 1) * dispenseAngleThresholds.z, Vector3.forward) * (mirrored? Vector3.left : Vector3.right) * 2f);
     }
 }

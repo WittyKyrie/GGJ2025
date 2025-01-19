@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3427479951517906359}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.45, y: 0.08, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 4251697873337489578}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9600003, y: -3.83, z: 0.03909466}
+  m_LocalPosition: {x: -2.9600003, y: -3.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -161,10 +161,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641e679178f0430438509156e7ce315b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fluidPrefab: {fileID: 6465786025261860976, guid: 66c4e31fed20c2f42a21e3a90bc4135b, type: 3}
   dispenseTransform: {fileID: 1863790645260207652}
-  dispenseMultiplier: 10
-  dispenseCurve:
+  dispenseRandomAngle: 10
+  dispenseAngleThresholds: {x: 90, y: 120, z: 180}
+  pourRotationAccelerationRange: {x: 0, y: 200}
+  pourRotationAccelerationMult: 0.5
+  particleInitVelocity: 10
+  pourRotationAccelerationAmpCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
@@ -177,10 +180,28 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
+      time: 0.29577637
+      value: 0.9941025
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.094091654
+    - serializedVersion: 3
+      time: 0.6470022
+      value: 0.31420642
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.2006979
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9970703
+      value: 0.67099
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -188,9 +209,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  dispenseRandomAngle: 10
-  pourRotationSpeed: 100
-  backtrackRotationSpeed: -30
-  rotationRange: {x: 0, y: 150}
-  dispenseMinAngle: 90
-  mirrored: 0
+  backtrackRotationAcceleration: -50
+  rotationRange: {x: 0, y: 180}
+  rotationSpeedRange: {x: -200, y: 100}
+  mirrored: 1
+  autoBindP1: 1
+  autoBindP2: 0
