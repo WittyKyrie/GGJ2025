@@ -1,100 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{275D85B3-313C-40E7-8DF7-353777ECAA52}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{041F7B42-C743-4BB8-85BE-9B0D5A9AFBC3}" SchemaVersion="119">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{275D85B3-313C-40E7-8DF7-353777ECAA52}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{041F7B42-C743-4BB8-85BE-9B0D5A9AFBC3}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_sfx_amb_bar_ingame" ID="{BA385942-880F-4A31-842F-A70833EEAC20}">
+				<Event Name="Play_bgm_ingame" ID="{73A44636-A0B3-4045-8B40-36E2B6EA2E58}">
 					<ChildrenList>
-						<Action Name="" ID="{FFC580B1-23E9-434C-9001-6B5448173CE2}" ShortID="930528675">
+						<Action Name="" ID="{146289F4-6608-4B40-90E0-F829E865D4D6}" ShortID="340929104">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_amb_bar_menu" ID="{5D60D757-8202-4D62-B518-09C0E24532B7}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+									<ObjectRef Name="sfx_amb_bar_menu" ID="{31FE8BEE-8389-413C-BDD5-0FF4FF224B6F}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{EB966242-7191-4BAB-ACFF-281E48BFA87E}" ShortID="299799793">
+						<Action Name="" ID="{9216B9AE-9385-4CA5-9D76-8C9FF0D413F4}" ShortID="286093157">
 							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_amb_bar" ID="{8E897715-8503-4C93-A37F-49074F648C1E}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+									<ObjectRef Name="bgm_ingame" ID="{58D33A19-8B17-4028-BB45-897013131341}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_sfx_amb_bar_menu" ID="{2B01B93D-D660-444D-833B-7C30D12A7431}">
+				<Event Name="Play_sfx_amb_bar_ingame" ID="{7455A073-089D-42D2-92ED-26EC0EA3F021}">
 					<ChildrenList>
-						<Action Name="" ID="{E1A290D6-7F42-48AE-BDFB-32894C9A4414}" ShortID="549950446">
+						<Action Name="" ID="{1EA030F9-027B-4364-B6C7-E44FF2B09F82}" ShortID="708696271">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_amb_bar" ID="{8E897715-8503-4C93-A37F-49074F648C1E}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+									<ObjectRef Name="sfx_amb_bar_menu" ID="{31FE8BEE-8389-413C-BDD5-0FF4FF224B6F}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{02409134-E938-410B-B3C7-85124B751BFB}" ShortID="626797874">
+						<Action Name="" ID="{C4982258-78A9-4B65-820B-69066DA1D8D8}" ShortID="662841511">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="bgm_ingame" ID="{577C62C9-1409-4B0C-81A7-A39DFD1A24D0}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{4F701A63-942F-4876-8289-79A48F79F6FB}" ShortID="929456102">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_amb_bar_menu" ID="{97F6866D-47F2-43B5-B271-EEB68ED07CE0}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+									<ObjectRef Name="sfx_amb_bar" ID="{67DD0D61-7C81-4B7C-A6CB-C09F8771D92A}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_bgm_ingame" ID="{A6330103-6062-4E0F-9FD3-B93C3E3D6106}">
+				<Event Name="Play_sfx_amb_bar_menu" ID="{BCBADE96-35D4-48E5-AA11-D59F1BA0544E}">
 					<ChildrenList>
-						<Action Name="" ID="{6B00BFEB-6F26-471A-A562-4CE79F4A5314}" ShortID="262899273">
+						<Action Name="" ID="{167C5B25-5C03-44DE-B41F-57FE26D65E8B}" ShortID="838388154">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_amb_bar_menu" ID="{97F6866D-47F2-43B5-B271-EEB68ED07CE0}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+									<ObjectRef Name="In_Game" ID="{85812329-E737-466E-962A-50B8899A4250}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{6164DB57-3D8A-4182-88BE-57DEE7DC0455}" ShortID="240106671">
+						<Action Name="" ID="{F5EF1352-9D8A-4EA8-AC2A-E1ED7F16CC9C}" ShortID="512765210">
 							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="bgm_ingame" ID="{577C62C9-1409-4B0C-81A7-A39DFD1A24D0}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+									<ObjectRef Name="sfx_amb_bar_menu" ID="{31FE8BEE-8389-413C-BDD5-0FF4FF224B6F}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Play_sfx_click_start" ID="{29D84858-C572-4DFC-A1DA-A7884E271D35}">
+				<Event Name="Play_sfx_click_start" ID="{81BB2B81-2FD9-49B6-9A17-E07CEA70D58C}">
 					<ChildrenList>
-						<Action Name="" ID="{18E4A493-2184-4F5B-A219-5E51CA89C7C5}" ShortID="944577638">
+						<Action Name="" ID="{7F18757D-7318-4D3E-BBB9-F15F84CE4B5D}" ShortID="1834739">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="sfx_click_start" ID="{2FA711EC-9A60-4046-8EE2-B6423E6456E2}" WorkUnitID="{6E458DD7-CDC7-4202-A98F-9C9F7C02DC87}"/>
+									<ObjectRef Name="sfx_click_start" ID="{BAED96C3-7B72-4DB8-8E07-C0343717B0DC}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

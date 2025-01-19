@@ -31,12 +31,13 @@ namespace Util.UI
 
         private void MainPlayerTurn(MainPlayerTurn e)
         {
+            countdownText.color = CommonUtil.HexToColor("#F92220");
             StartCountdown(() => QuickEvent.DispatchMessage(new ShowPlayerTurnText(false)));
         }
 
         private void SubPlayerTurn(SubPlayerTurn e)
         {
-            //todo:可能存在满了也停止的原因
+            countdownText.color = CommonUtil.HexToColor("#16BFDC");
             StartCountdown(() => GameManager.Instance.ChangeState(GameState.Drinking));
         }
 
@@ -61,7 +62,7 @@ namespace Util.UI
             {
                 if (countdownText != null)
                 {
-                    countdownText.text = countdownTime.ToString(); // 更新TextMeshPro组件的文本
+                    countdownText.text = $"<shake>{countdownTime}</shake>"; // 更新TextMeshPro组件的文本，加入<shake>
                 }
 
                 Debug.Log($"Time left: {countdownTime} seconds");
@@ -73,7 +74,7 @@ namespace Util.UI
 
             if (countdownText != null)
             {
-                countdownText.text = "0"; // 倒计时结束时显示0
+                countdownText.text = "<shake>0</shake>"; // 倒计时结束时显示0，加入<shake>
             }
 
             // 倒计时结束后执行回调方法
@@ -94,7 +95,7 @@ namespace Util.UI
 
             if (countdownText != null)
             {
-                countdownText.text = "0"; // 更新显示
+                countdownText.text = "<shake>0</shake>"; // 更新显示，加入<shake>
             }
 
             img.SetActive(false); // 隐藏倒计时UI
