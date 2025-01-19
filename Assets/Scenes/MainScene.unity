@@ -14195,33 +14195,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 370622019}
     m_Modifications:
-    - target: {fileID: 3798377425179107685, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
-      propertyPath: uIAnimation
-      value: 
-      objectReference: {fileID: 8221393836669924655}
-    - target: {fileID: 3923960876021979576, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3923960876021979576, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4333038076607210914, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4639969303167525008, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
       propertyPath: m_Name
       value: SettileMent
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639969303167525008, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6063003919370087681, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
-      propertyPath: m_Layer
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6070068761211787852, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
       propertyPath: m_Pivot.x
@@ -14308,17 +14288,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
---- !u!114 &8221393836669924655 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2691900812714928476, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
-  m_PrefabInstance: {fileID: 8221393836669924654}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f771c25e495440cd92df022f5265e305, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
