@@ -45,6 +45,7 @@ namespace Util.UI
         [Button]
         public void ShowPlayerTurnText(ShowPlayerTurnText e)
         {
+            AkSoundEngine.PostEvent(SoundEffects.RoundNotice, GameManager.Instance.gameObject);
             if (e.IsMainPlayer)
             {
                 red.gameObject.SetActive(true);

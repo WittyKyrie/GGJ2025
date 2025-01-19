@@ -6,6 +6,7 @@ using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Util;
 using Util.EventHandleSystem;
 using Util.UI;
 
@@ -55,6 +56,7 @@ namespace Player
             beerGlass.gameObject.SetActive(false);
             beerCan.gameObject.SetActive(false);
             bar.gameObject.SetActive(true);
+            AkSoundEngine.PostEvent(SoundEffects.DrinkingRound, GameManager.Instance.gameObject);
             
             DOVirtual.DelayedCall(2f, () =>
             {

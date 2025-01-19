@@ -48,6 +48,7 @@ namespace Util.UI
 
             // 播放点击音效
             AkSoundEngine.PostEvent(SoundEffects.Click, GameManager.Instance.gameObject);
+            AkSoundEngine.PostEvent(SoundEffects.CutScene, GameManager.Instance.gameObject);
         }
 
         private void PlaySpineAnimation()
@@ -123,11 +124,13 @@ namespace Util.UI
 
         public void AboutUs()
         {
+            AkSoundEngine.PostEvent(SoundEffects.NormalClick, GameManager.Instance.gameObject);
             // 实现您的关于我们逻辑
         }
 
         public void Exit()
         {
+            AkSoundEngine.PostEvent(SoundEffects.NormalClick, GameManager.Instance.gameObject);
             Application.Quit();
         }
     }
