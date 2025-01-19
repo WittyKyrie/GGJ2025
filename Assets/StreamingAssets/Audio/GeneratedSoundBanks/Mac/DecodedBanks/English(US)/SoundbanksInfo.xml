@@ -159,7 +159,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3676622988" Type="User" Language="SFX" Hash="{08C3983B-41CE-9FF9-E802-31B8A83AF400}">
+		<SoundBank Id="3676622988" Type="User" Language="SFX" Hash="{579831AB-4860-9049-E604-AE806BF318F9}">
 			<ShortName>Bubble_Game</ShortName>
 			<Path>Bubble_Game.bnk</Path>
 			<Media>
@@ -361,5 +361,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D8372DE8-9721-9F09-DC12-38831A8CA9E0}</FileHash>
+	<FileHash>{A1EA6589-762B-202E-8A58-71C6D487E132}</FileHash>
 </SoundBanksInfo>

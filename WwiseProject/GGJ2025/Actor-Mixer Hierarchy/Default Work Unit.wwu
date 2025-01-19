@@ -201,6 +201,7 @@
 								<Sound Name="sfx_pouring_beer" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" ShortID="572125757">
 									<PropertyList>
 										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
