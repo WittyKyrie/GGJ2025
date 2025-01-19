@@ -11,6 +11,16 @@ namespace Util.EventHandleSystem
         }
     }
     
+    public struct ShowUseBuff
+    {
+        public readonly string BuffKey;
+
+        public ShowUseBuff(string buffKey)
+        {
+            BuffKey = buffKey;
+        }
+    }
+    
     public struct ShowSelectBuff
     {
     }
