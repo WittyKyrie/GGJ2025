@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{8D35C657-0896-770A-2D15-F94A54165067}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2F0F7102-A729-075B-6B6A-677704ABE944}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,15 +21,6 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
-			<StateGroups>
-				<StateGroup Id="4038591736" Name="Beer_Pouring">
-					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="979470758" Name="Yes"/>
-						<State Id="1668749452" Name="No"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
 			<AcousticTextures>
 				<AcousticTexture Id="504532776" Name="Brick">
 					<Properties>
@@ -159,7 +150,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3676622988" Type="User" Language="SFX" Hash="{E2837B0B-7B73-D038-A882-75A146FA5CAB}">
+		<SoundBank Id="3676622988" Type="User" Language="SFX" Hash="{2C4520C9-074A-C02B-26FE-6C17D808ED4C}">
 			<ShortName>Bubble_Game</ShortName>
 			<Path>Bubble_Game.bnk</Path>
 			<Media>
@@ -174,10 +165,6 @@
 				<File Id="139651745" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Funky On.wav</ShortName>
 					<CachePath>SFX/Funky On_56CEF360.wem</CachePath>
-				</File>
-				<File Id="139832732" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_cut_sence.wav</ShortName>
-					<CachePath>SFX/sfx_cut_sence_8E324C96.wem</CachePath>
 				</File>
 				<File Id="225686808" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_amb_pour_beer.wav</ShortName>
@@ -199,25 +186,9 @@
 					<ShortName>sfx_amb_bar.wav</ShortName>
 					<CachePath>SFX/sfx_amb_bar_56CEF360.wem</CachePath>
 				</File>
-				<File Id="512534011" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_beer_cheers.wav</ShortName>
-					<CachePath>SFX/sfx_beer_cheers_8E324C96.wem</CachePath>
-				</File>
-				<File Id="601434585" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_click_normal.wav</ShortName>
-					<CachePath>SFX/sfx_click_normal_8E324C96.wem</CachePath>
-				</File>
 				<File Id="729234419" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_amb_bar_menu.wav</ShortName>
 					<CachePath>SFX/sfx_amb_bar_menu_56CEF360.wem</CachePath>
-				</File>
-				<File Id="914774554" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_drinking_round.wav</ShortName>
-					<CachePath>SFX/sfx_drinking_round_8E324C96.wem</CachePath>
-				</File>
-				<File Id="933675984" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>sfx_round_notice.wav</ShortName>
-					<CachePath>SFX/sfx_round_notice_8E324C96.wem</CachePath>
 				</File>
 				<File Id="936146750" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pouring Fizzy Beverage.wav</ShortName>
@@ -269,10 +240,7 @@
 						<MediaRef Id="354479180"/>
 						<MediaRef Id="418813728"/>
 						<MediaRef Id="449944962"/>
-						<MediaRef Id="512534011"/>
 						<MediaRef Id="729234419"/>
-						<MediaRef Id="914774554"/>
-						<MediaRef Id="933675984"/>
 						<MediaRef Id="936146750"/>
 					</MediaRefs>
 					<PluginRefs>
@@ -281,38 +249,12 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="604102624" Name="Play_sfx_click_normal" DurationType="OneShot" DurationMin="0.17194346" DurationMax="0.20447637">
-					<MediaRefs>
-						<MediaRef Id="601434585"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="1695911055" Name="Play_sfx_click_start" DurationType="OneShot" DurationMin="5.1818366" DurationMax="5.1818366">
 					<MediaRefs>
 						<MediaRef Id="2140184"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="495583777" Name="Play_sfx_cut_sence" DurationType="OneShot" DurationMin="7.556281" DurationMax="7.556281">
-					<MediaRefs>
-						<MediaRef Id="139832732"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3700857917" Name="Play_sfx_drinking_round" DurationType="OneShot" DurationMin="3.660975" DurationMax="3.660975">
-					<MediaRefs>
-						<MediaRef Id="914774554"/>
-						<MediaRef Id="936146750"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2726246453" Name="Play_sfx_pouring_beer" DurationType="OneShot" DurationMin="25.945984" DurationMax="32.68989">
-					<MediaRefs>
-						<MediaRef Id="936146750"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1032364325" Name="Play_sfx_round_notice" DurationType="OneShot" DurationMin="0.55" DurationMax="0.55">
-					<MediaRefs>
-						<MediaRef Id="933675984"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="4200562683" Name="Stop_sfx_pouring_beer" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+				<Event Id="2726246453" Name="Play_sfx_pouring_beer" DurationType="OneShot" DurationMin="30.855148" DurationMax="30.855148">
 					<MediaRefs>
 						<MediaRef Id="936146750"/>
 					</MediaRefs>
@@ -320,5 +262,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2B5F6107-D611-6A68-01AD-7C1A1EA6070C}</FileHash>
+	<FileHash>{12D119FB-6161-7F99-3E7F-500A213A9969}</FileHash>
 </SoundBanksInfo>
