@@ -94,7 +94,11 @@
 						<Action Name="" ID="{ED18D131-CCF7-4516-8010-A693E4FE35B0}" ShortID="640781589">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -103,6 +107,10 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{AE1A2811-7FCD-4F10-A3D0-4A954EC97F36}" ShortID="1046751046">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.11"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_pouring_beer" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>

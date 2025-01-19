@@ -159,7 +159,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3676622988" Type="User" Language="SFX" Hash="{444D637A-43A9-6D80-9821-5F10A7304C08}">
+		<SoundBank Id="3676622988" Type="User" Language="SFX" Hash="{71AF09CB-233E-7B5F-6C55-A3E5A6CACEC9}">
 			<ShortName>Bubble_Game</ShortName>
 			<Path>Bubble_Game.bnk</Path>
 			<Media>
@@ -302,7 +302,7 @@
 						<MediaRef Id="936146750"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2726246453" Name="Play_sfx_pouring_beer" DurationType="OneShot" DurationMin="25.945984" DurationMax="32.68989">
+				<Event Id="2726246453" Name="Play_sfx_pouring_beer" DurationType="OneShot" DurationMin="27.065985" DurationMax="33.80989">
 					<MediaRefs>
 						<MediaRef Id="936146750"/>
 					</MediaRefs>
@@ -321,5 +321,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B26C2C76-1C32-54B1-F6DD-A7A24B908444}</FileHash>
+	<FileHash>{18019720-2097-CD42-A0AE-EEFA1F360CF6}</FileHash>
 </SoundBanksInfo>
