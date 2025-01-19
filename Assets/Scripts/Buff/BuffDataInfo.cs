@@ -62,7 +62,7 @@ namespace Buff
                 throw new ArgumentException($"Requested count ({count}) exceeds the available BuffData count ({buffList.Count}).");
             }
 
-            return new List<BuffData>() { buffList[6], buffList[6], buffList[6] };
+            return new List<BuffData>() { buffList[7], buffList[7], buffList[7] };
             return buffList.OrderBy(_ => Guid.NewGuid()).Take(count).ToList();
         }
 
@@ -78,7 +78,6 @@ namespace Buff
                 case "PropMTS": return new PropMTS();
                 case "PropLiftTable": return new PropLiftTable();
                 case "PropTransform": return new PropTransform();
-                case "PropCall": return new PropCall();
                 default:
                     return null;
             }

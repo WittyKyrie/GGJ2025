@@ -27,6 +27,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23d3d25d607d1f843b62c9c0fe387da3
+    m_Address: Assets/Prefab/MentosParticle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2cd7d83772ed73b42a51b10fc353ea91, type: 2}
   m_SchemaSet:

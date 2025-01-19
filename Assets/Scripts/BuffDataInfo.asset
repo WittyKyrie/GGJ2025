@@ -35,11 +35,11 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 6214374ca2c81f443a6f32f767ce2588, type: 3}
   - key: PropMTS
     name: "\u66FC\u59A5\u601D"
-    describe: "\u676F\u5185\u6CE1\u6CAB\u76F4\u63A5\u5347\u81F3\u9152\u676F\u5BB9\u91CF\u6700\u5927\uFF08\u4F4E\u6982\u7387\uFF09"
+    describe: "\u9152\u676F\u5185\u6CE1\u6CAB\u7FFB\u500D"
     sprite: {fileID: 21300000, guid: f2af466a47d706f44a712668a3df9b24, type: 3}
   - key: PropLiftTable
     name: "\u6380\u684C"
-    describe: "\u6E05\u7A7A\u9152\u676F"
+    describe: "\u6E05\u7A7A\u5F53\u524D\u9152\u676F"
     sprite: {fileID: 21300000, guid: 1a7c077aa46bda3419fe754574e19b64, type: 3}
   - key: PropTransform
     name: "\u58F0\u4E1C\u51FB\u897F"

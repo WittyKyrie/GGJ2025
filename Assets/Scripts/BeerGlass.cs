@@ -32,6 +32,7 @@ public class BeerGlass : MonoBehaviour
     public int fullGlassMaxCount = 300;
     public float volumePerFluid = 10;
 
+    private List<GameObject> fluidParticles = new List<GameObject>();
     private List<FoamParticle> foamParticle = new List<FoamParticle>();
     private List<GameObject> specialParticle = new List<GameObject>();
     private bool hasDispatchedFullEvent = false;
@@ -87,6 +88,11 @@ public class BeerGlass : MonoBehaviour
     }
     public void CleanUpParticle()
     {
+        foreach (var go in fluidParticles)
+        {
+            FluidParticlePool.Singleton.ReleaseFluidParticle(go);
+        }
+        fluidParticles.Clear();
         foreach (var fp in foamParticle)
         {
             FoamParticlePool.Singleton.ReleaseFoamParticle(fp);
@@ -153,7 +159,7 @@ public class BeerGlass : MonoBehaviour
         {
             if (IsGlassFull()) return;
             fluidCount += 1;
-            specialParticle.Add(other.gameObject);
+            fluidParticles.Add(other.gameObject);
             //加球后尝试结算
             CheckGlassFull();
         }
@@ -209,6 +215,28 @@ public class BeerGlass : MonoBehaviour
         });
         seq.Append(transform.DOMove(orign, 1f));
     }
+    public void TriggerSwitchBeerAndFoam()
+    {
+        var tmpFluid = new List<GameObject>();
+        foreach (var fp in foamParticle)
+        {
+            GameObject fluid = FluidParticlePool.Singleton.GetFluidParticle();
+            fluid.transform.position = fp.transform.position;
+            tmpFluid.Add(fluid);
+        }
+        var tmpFoam = new List<FoamParticle>();
+        foreach (var fp in fluidParticles)
+        {
+            FoamParticle foamParticle = FoamParticlePool.Singleton.GetFoamParticle();
+            foamParticle.transform.position = fp.transform.position;
+            tmpFoam.Add(foamParticle);
+        }
+        this.CleanUpParticle();
+        foamParticle = tmpFoam;
+        fluidParticles = tmpFluid;
+        generatedFoamCount = foamParticle.Count;
+        fluidCount = fluidParticles.Count;
+    }
     
     public void GenerateFoamParticle(int count)
     {
@@ -217,7 +245,7 @@ public class BeerGlass : MonoBehaviour
         {
             var genPos = generationTransform.position.Offset(x: Mathf.Lerp(-foamLineLength / 2f, foamLineLength / 2f, Random.Range(0f, 1f)));
 
-            FoamParticle fp =FoamParticlePool.Singleton.GetFoamParticle();
+            FoamParticle fp = FoamParticlePool.Singleton.GetFoamParticle();
             fp.transform.position = genPos;
             var direction = generationTransform.up;
             direction = Quaternion.AngleAxis(Random.Range(-generationRandomAngle, generationRandomAngle),Vector3.forward) * direction;

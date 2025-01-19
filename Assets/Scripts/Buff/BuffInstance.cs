@@ -181,7 +181,21 @@ public class PropLiftTable : BuffInstance
 }
 public class PropTransform : BuffInstance
 {
-    
+    public override void OnUseItem()
+    {
+        if (GameManager.Instance.GetCurrentState() == GameState.MainPlayerTurn)
+        {
+            GameManager.Instance.subPlayer.beerGlass.TriggerSwitchBeerAndFoam();
+        }
+        else if (GameManager.Instance.GetCurrentState() == GameState.SubPlayerTurn)
+        {
+            GameManager.Instance.subPlayer.beerGlass.TriggerSwitchBeerAndFoam();
+        }
+    }
+    public override void OnPourEnd()
+    {
+        fromPlayer.RemoveItem(this);
+    }
 }
 public class PropCall : BuffInstance
 {
