@@ -64,5 +64,23 @@ namespace Buff
 
             return buffList.OrderBy(_ => Guid.NewGuid()).Take(count).ToList();
         }
+
+        public static BuffInstance GetBuffInstance(string buffName)
+        {
+            switch (buffName)
+            {
+                case "PropHand": return new PropHand();
+                case "PropSnacks": return new PropSnacks();
+                case "PropPower": return new PropPower();
+                case "PropSnakes": return new PropSnakes();
+                case "PropChopsticks": return new PropChopsticks();
+                case "PropMTS": return new PropMTS();
+                case "PropLiftTable": return new PropLiftTable();
+                case "PropTransform": return new PropTransform();
+                case "PropCall": return new PropCall();
+                default:
+                    return null;
+            }
+        }
     }
 }

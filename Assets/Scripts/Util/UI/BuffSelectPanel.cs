@@ -40,8 +40,8 @@ namespace Util.UI
         [Button]
         public void ShowMainPlayerSelect()
         {
-            var buffList = BuffDataInfo.GetRandomBuffData(3);
-            GameManager.Instance.mainPlayer.Buffs = buffList;
+            var buffDataList = BuffDataInfo.GetRandomBuffData(3);
+            GameManager.Instance.mainPlayer.InstantiateBuffInstance(buffDataList);
             var operateList = new List<string>()
             {
                 "Q",
@@ -51,7 +51,7 @@ namespace Util.UI
 
             for (int i = 0; i < 3; i++)
             {
-                singleBuffSelects[i].Init(buffList[i], operateList[i]);
+                singleBuffSelects[i].Init(buffDataList[i], operateList[i]);
             }
             
             selectObj.gameObject.SetActive(true);
@@ -67,8 +67,8 @@ namespace Util.UI
         [Button]
         public void ShowSubPlayerSelect()
         {
-            var buffList = BuffDataInfo.GetRandomBuffData(3);
-            GameManager.Instance.subPlayer.Buffs = buffList;
+            var buffDataList = BuffDataInfo.GetRandomBuffData(3);
+            GameManager.Instance.subPlayer.InstantiateBuffInstance(buffDataList);
             var operateList = new List<string>()
             {
                 "1",
@@ -78,12 +78,10 @@ namespace Util.UI
 
             for (int i = 0; i < 3; i++)
             {
-                singleBuffSelects[i].Init(buffList[i], operateList[i]);
+                singleBuffSelects[i].Init(buffDataList[i], operateList[i]);
             }
             
             selectObj.gameObject.SetActive(true);
-            GameManager.Instance.mainPlayer.InitBuffList();
-            GameManager.Instance.subPlayer.InitBuffList();
             simpleUIAnimation.DoBornAnimation().OnComplete(() =>
             {
                 btn.gameObject.SetActive(true);

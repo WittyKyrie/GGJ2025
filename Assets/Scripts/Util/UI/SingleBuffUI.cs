@@ -10,10 +10,20 @@ namespace Util.UI
         public TMP_Text name;
         public Image img;
 
-        public void Init(BuffData data)
+        public void UpdateDisplay(BuffInstance instance)
         {
-            name.text = data.name;
-            img.sprite = data.sprite;
+            name.text = instance.buffData.name;
+            img.sprite = instance.buffData.sprite;
+            if (instance.used)
+            {
+                name.color = Color.gray;
+                img.color = Color.gray;
+            }
+            else
+            {
+                name.color = Color.white;
+                img.color = Color.white;
+            }
         }
     }
 }

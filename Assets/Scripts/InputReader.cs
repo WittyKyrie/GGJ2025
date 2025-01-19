@@ -56,4 +56,13 @@ public class InputReader : Singleton<InputReader>
         if (Input.GetKeyUp(KeyCode.Keypad2)) OnP2Skill2KeyInput?.Invoke(KeyState.Up);
         if (Input.GetKeyUp(KeyCode.Keypad3)) OnP2Skill3KeyInput?.Invoke(KeyState.Up);  
     }
+
+    public void ClearItemKeys()
+    {
+        InputReader.Instance.OnP1Skill2KeyInput = null;
+        InputReader.Instance.OnP1Skill3KeyInput = null;
+        InputReader.Instance.OnP2Skill1KeyInput = null;
+        InputReader.Instance.OnP2Skill2KeyInput = null;
+        InputReader.Instance.OnP2Skill3KeyInput = null;
+    }
 }

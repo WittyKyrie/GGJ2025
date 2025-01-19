@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Buff;
 using DG.Tweening;
 using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Util.EventHandleSystem;
 using Util.UI;
 
@@ -14,7 +16,7 @@ namespace Player
         public bool isMainPlayer;
         public float maxHealth = 10000; //最大酒量
         public float currentHealth = 10000; //当前酒量
-        public List<BuffData> Buffs = new(); //道具列表
+        public BuffInstance[] BuffInstance = new BuffInstance[3];
         public MMProgressBar bar;
         public PlayerBuffList playerBuffList;
         public BeerGlass beerGlass;
@@ -60,9 +62,55 @@ namespace Player
             });
         }
 
-        public void InitBuffList()
+        public void InstantiateBuffInstance(List<BuffData> buffDatas)
         {
-            playerBuffList.Init(Buffs);
+            //create buff instance
+            for (int i = 0; i < buffDatas.Count; i++)
+            {
+                var instance = BuffDataInfo.GetBuffInstance(buffDatas[i].key);
+                instance.buffData = buffDatas[i];
+                instance.Init(this);
+                BuffInstance[i] = instance;
+            }
+            playerBuffList.UpdateBuffUI(BuffInstance);
+        }
+
+        public void UseItem(int itemIndex)
+        {
+            if (BuffInstance[itemIndex] != null && !BuffInstance[itemIndex].used)
+            {
+                BuffInstance[itemIndex].OnUseItem();
+                BuffInstance[itemIndex].used = true;
+                playerBuffList.UpdateBuffUI(BuffInstance);
+            }
+        }
+
+        public void EndItemOnPour()
+        {
+            foreach (var instance in BuffInstance)
+            {
+                if(instance.used) instance.OnPourEnd();
+            }
+        }
+        public void EndItemOnRound()
+        {
+            foreach (var instance in BuffInstance)
+            {
+                if(instance.used) instance.OnRoundEnd();
+            }
+        }
+
+        public void RemoveItem(BuffInstance item)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                if (BuffInstance[i] == item)
+                {
+                    BuffInstance[i] = null;
+                    break;
+                }
+            }
+            playerBuffList.UpdateBuffUI(BuffInstance);
         }
 
         private void MainPlayerTurn(MainPlayerTurn e)
