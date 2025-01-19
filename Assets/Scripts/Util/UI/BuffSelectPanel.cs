@@ -11,6 +11,9 @@ namespace Util.UI
 {
     public class BuffSelectPanel : MonoBehaviour
     {
+        public Sprite btnRed;
+        public Sprite btnBlue;
+        
         public GameObject redBck;
         public GameObject blueBck;
 
@@ -55,6 +58,7 @@ namespace Util.UI
             simpleUIAnimation.DoBornAnimation().OnComplete(() =>
             {
                 btn.gameObject.SetActive(true);
+                btn.GetComponent<Image>().sprite = btnRed;
                 btn.onClick.RemoveAllListeners();
                 btn.onClick.AddListener(ShowBlueBck);
             });
@@ -83,6 +87,7 @@ namespace Util.UI
             simpleUIAnimation.DoBornAnimation().OnComplete(() =>
             {
                 btn.gameObject.SetActive(true);
+                btn.GetComponent<Image>().sprite = btnBlue;
                 btn.onClick.RemoveAllListeners();
                 btn.onClick.AddListener(() =>
                 {
