@@ -31,13 +31,13 @@ namespace Util.UI
 
         private void MainPlayerTurn(MainPlayerTurn e)
         {
-            countdownText.color = Color.red;
+            countdownText.color = CommonUtil.HexToColor("#F92220");
             StartCountdown(() => QuickEvent.DispatchMessage(new ShowPlayerTurnText(false)));
         }
 
         private void SubPlayerTurn(SubPlayerTurn e)
         {
-            countdownText.color = Color.blue;
+            countdownText.color = CommonUtil.HexToColor("#16BFDC");
             StartCountdown(() => GameManager.Instance.ChangeState(GameState.Drinking));
         }
 
