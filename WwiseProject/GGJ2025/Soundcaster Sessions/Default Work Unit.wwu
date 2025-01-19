@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{51C4C1FA-CBB5-4465-835B-9D86CE44DAAF}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{51C4C1FA-CBB5-4465-835B-9D86CE44DAAF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{51C4C1FA-CBB5-4465-835B-9D86CE44DAAF}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="test" ID="{03CBE762-A42D-4BFD-BEF9-83EE3F325663}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_sfx_pouring_beer" ID="{0DF434EB-8323-4328-9A0B-06A2C0F3EC24}" WorkUnitID="{041F7B42-C743-4BB8-85BE-9B0D5A9AFBC3}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_sfx_drinking_round" ID="{FEDF62F2-3F20-493A-ADE8-D1ED758EE234}" WorkUnitID="{041F7B42-C743-4BB8-85BE-9B0D5A9AFBC3}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_sfx_round_notice" ID="{60AC15C7-44B6-49A1-9AD2-124C2C4C6B7F}" WorkUnitID="{041F7B42-C743-4BB8-85BE-9B0D5A9AFBC3}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="sfx_prop_appear" ID="{7E7CEAEA-5EF4-4F18-A6F5-36B5B220D7A2}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_bgm_ingame" ID="{73A44636-A0B3-4045-8B40-36E2B6EA2E58}" WorkUnitID="{041F7B42-C743-4BB8-85BE-9B0D5A9AFBC3}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_sfx_amb_bar_menu" ID="{BCBADE96-35D4-48E5-AA11-D59F1BA0544E}" WorkUnitID="{041F7B42-C743-4BB8-85BE-9B0D5A9AFBC3}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_sfx_amb_bar_ingame" ID="{7455A073-089D-42D2-92ED-26EC0EA3F021}" WorkUnitID="{041F7B42-C743-4BB8-85BE-9B0D5A9AFBC3}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="No" ID="{3EC2CCA4-8117-4D5A-ACFE-E79F864C7A9A}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

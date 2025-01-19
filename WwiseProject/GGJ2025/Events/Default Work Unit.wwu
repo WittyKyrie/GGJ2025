@@ -91,24 +91,9 @@
 				</Event>
 				<Event Name="Play_sfx_pouring_beer" ID="{0DF434EB-8323-4328-9A0B-06A2C0F3EC24}">
 					<ChildrenList>
-						<Action Name="" ID="{ED18D131-CCF7-4516-8010-A693E4FE35B0}" ShortID="640781589">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="sfx_pouring_beer" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{AE1A2811-7FCD-4F10-A3D0-4A954EC97F36}" ShortID="1046751046">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.11"/>
+								<Property Name="Delay" Type="Real64" Value="1.12"/>
 								<Property Name="FadeTime" Type="Real64" Value="3"/>
 							</PropertyList>
 							<ReferenceList>
@@ -195,6 +180,50 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="sfx_drinking_round" ID="{0B125933-3A12-4ED4-AC10-D400CC0C977F}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_prop_appear" ID="{FDA0F463-5F08-49BF-A2AA-36FF735B97C8}">
+					<ChildrenList>
+						<Action Name="" ID="{5D8D318B-ABCB-4215-91A8-B6E6BF26FE12}" ShortID="590571184">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_prop_appear" ID="{7E7CEAEA-5EF4-4F18-A6F5-36B5B220D7A2}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_prop_notice" ID="{13109903-243E-4FB3-8E81-517052793321}">
+					<ChildrenList>
+						<Action Name="" ID="{A196E1D9-A504-4E61-A70A-D02F19061CDB}" ShortID="446823893">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_prop_notice" ID="{FAC316D4-5B35-478F-B87B-AB5E553D4E59}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_prop_use" ID="{6312F131-8778-46E1-9693-0AE3946E3C73}">
+					<ChildrenList>
+						<Action Name="" ID="{E3E945A7-1591-4EA8-A372-791B8D077B88}" ShortID="262799131">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_prop_use" ID="{CDC64E6B-4076-4F9F-A60A-75972EC81E55}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_end_round" ID="{CE915C86-F74E-47A8-ABB3-C04E6228C1A6}">
+					<ChildrenList>
+						<Action Name="" ID="{CCBCDCD0-D90C-4629-824C-6C19DAB4682F}" ShortID="505207767">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_end_round" ID="{59E95676-25E7-4B61-B05A-ECC17147E1D9}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
