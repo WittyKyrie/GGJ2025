@@ -108,18 +108,18 @@ namespace Player
             }
         }
 
-        public void EndItemOnPour()
+        public void EndItemOnPour()     
         {
             foreach (var instance in BuffInstance)
             {
-                if(instance.used) instance.OnPourEnd();
+                if(instance != null && instance.used) instance.OnPourEnd();
             }
         }
         public void EndItemOnRound()
         {
             foreach (var instance in BuffInstance)
             {
-                if(instance.used) instance.OnRoundEnd();
+                if(instance != null && instance.used) instance.OnRoundEnd();
             }
         }
 

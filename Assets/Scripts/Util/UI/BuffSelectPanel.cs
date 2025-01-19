@@ -40,7 +40,10 @@ namespace Util.UI
         [Button]
         public void ShowMainPlayerSelect()
         {
-            var buffDataList = BuffDataInfo.GetRandomBuffData(3);
+            //var buffDataList = BuffDataInfo.GetRandomBuffData(3);
+            
+            var buffList = GameManager.Instance.buffDataInfo.buffDataList;
+            var buffDataList = new List<BuffData>() { buffList[4], buffList[0], buffList[2] };
             GameManager.Instance.mainPlayer.InstantiateBuffInstance(buffDataList);
             var operateList = new List<string>()
             {
@@ -68,7 +71,9 @@ namespace Util.UI
         [Button]
         public void ShowSubPlayerSelect()
         {
-            var buffDataList = BuffDataInfo.GetRandomBuffData(3);
+            //var buffDataList = BuffDataInfo.GetRandomBuffData(3);
+            var buffList = GameManager.Instance.buffDataInfo.buffDataList;
+            var buffDataList = new List<BuffData>() { buffList[5], buffList[3], buffList[1] };
             GameManager.Instance.subPlayer.InstantiateBuffInstance(buffDataList);
             var operateList = new List<string>()
             {
