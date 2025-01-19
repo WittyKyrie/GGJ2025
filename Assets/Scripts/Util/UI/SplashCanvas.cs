@@ -35,13 +35,13 @@ namespace Util.UI
                 talk2.SetActive(true);
             });
 
-            DOVirtual.DelayedCall(3f, () =>
+            DOVirtual.DelayedCall(4f, () =>
             {
                 talk2.SetActive(false);
                 panel.SetActive(true);
             });
             
-            DOVirtual.DelayedCall(4f, PlaySpineAnimation);
+            DOVirtual.DelayedCall(5f, PlaySpineAnimation);
 
             // 开始异步加载目标场景
             StartCoroutine(LoadSceneAsync());

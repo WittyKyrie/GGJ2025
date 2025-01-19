@@ -122,7 +122,10 @@ namespace Player
             {
                 beerGlass.gameObject.SetActive(false);
                 beerCan.gameObject.SetActive(true);
-                beerCan.BindP1();
+                DOVirtual.DelayedCall(1, () =>
+                {
+                    beerCan.BindP1();
+                });
             }
             else
             {
@@ -141,7 +144,10 @@ namespace Player
             {
                 beerGlass.gameObject.SetActive(false);
                 beerCan.gameObject.SetActive(true);
-                beerCan.BindP2();
+                DOVirtual.DelayedCall(1, () =>
+                {
+                    beerCan.BindP2();
+                });
             }
             else
             {
