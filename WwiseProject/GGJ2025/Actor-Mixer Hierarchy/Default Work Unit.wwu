@@ -152,6 +152,28 @@
 										<ActiveSource Name="sfx_amb_bar" ID="{045967E8-5AE0-41A3-896C-E46C7FD006D8}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="Pouring Fizzy Beverage" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" ShortID="572125757">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Pouring Fizzy Beverage" ID="{26A25169-9E67-4F9B-9FF8-2E98D5B26C9B}">
+											<Language>SFX</Language>
+											<AudioFile>Pouring Fizzy Beverage.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="936146750"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Pouring Fizzy Beverage" ID="{26A25169-9E67-4F9B-9FF8-2E98D5B26C9B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Menu" ID="{9DE1DC1A-A440-4327-B86F-82D5A6C9DE87}" ShortID="459973723">

@@ -43,45 +43,45 @@
 	<ValidationCacheItem File="Y:\Documents\WwiseProjects\GGJ2025\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1737225511" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\WwiseProjects\GGJ2025\Actor-Mixer Hierarchy\Factory Soundseed Air Objects.wwu" DateLow="1737225570" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\WwiseProjects\GGJ2025\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1737225511" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Virtual Acoustics\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Triggers\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Switches\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\States\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\SoundBanks\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Queries\Factory Queries.wwu" DateLow="1737225511" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Queries\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Presets\Factory Spatial Audio.wwu" DateLow="1737225511" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Presets\Factory Reflect.wwu" DateLow="1737225568" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Presets\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Modulators\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Mixing Sessions\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Metadata\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\GGJ2025.wproj" DateLow="1737260567" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\GGJ2025.crossover.wsettings" DateLow="1737227426" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Game Parameters\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Events\Default Work Unit.wwu" DateLow="1737227209" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory Reflect.wwu" DateLow="1737225568" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory McDSP Effects.wwu" DateLow="1737225580" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory Mastering Suite.wwu" DateLow="1737225566" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1737225575" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1737225575" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1737225575" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Filters.wwu" DateLow="1737225575" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Dynamics.wwu" DateLow="1737225575" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Delay.wwu" DateLow="1737225575" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Box Modeler.wwu" DateLow="1737225575" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory Effects.wwu" DateLow="1737225511" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory Auro Headphone.wwu" DateLow="1737225572" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1737225511" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Conversion Settings\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Control Surface Sessions\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Audio Devices\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Attenuations\Default Work Unit.wwu" DateLow="1737226595" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1737227209" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Virtual Acoustics\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Triggers\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Switches\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\States\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\SoundBanks\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Queries\Factory Queries.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Queries\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Presets\Factory Spatial Audio.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Presets\Factory Reflect.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Presets\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Modulators\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Mixing Sessions\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Metadata\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\GGJ2025.wproj" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\GGJ2025.crossover.wsettings" DateLow="1737261531" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Game Parameters\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Events\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory Reflect.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory McDSP Effects.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory Mastering Suite.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Hybrid Reverb Effects.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Filters.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Dynamics.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Delay.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory iZotope Box Modeler.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory Effects.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Factory Auro Headphone.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Effects\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Conversion Settings\Factory Conversion Settings.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Conversion Settings\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Control Surface Sessions\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Audio Devices\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Attenuations\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1737261512" DateHigh="0"/>
 </ValidationCache>
