@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Buff;
 using DG.Tweening;
@@ -22,7 +23,11 @@ namespace Player
         public PlayerBuffList playerBuffList;
         public BeerGlass beerGlass;
         public BeerCan beerCan;
+        public GameObject SnackLabel;
 
+        public Func<float> GetSnacksMultiplier;
+        public Func<float> GetPropPowerMultiplier;
+        
         private void Awake()
         {
             bar.SetBar01(1);
@@ -51,16 +56,31 @@ namespace Player
         public void Drinking()
         {
             playerBuffList.gameObject.SetActive(false);
-            var result = beerGlass.GetBeerVolumeResult();
+            var beerDamage = beerGlass.GetBeerVolumeResult();
+            beerDamage *= beerGlass.GetSnakeMultiplier();
+            if (GetSnacksMultiplier != null) beerDamage *= GetSnacksMultiplier.Invoke();
+
+            var preHealAmount = 0f;
+            if(GetPropPowerMultiplier != null) preHealAmount = beerDamage * GetPropPowerMultiplier.Invoke();
+            
             beerGlass.Reset();
             beerGlass.gameObject.SetActive(false);
             beerCan.gameObject.SetActive(false);
             bar.gameObject.SetActive(true);
+
+            DOVirtual.DelayedCall(1f, () =>
+            {
+                if (preHealAmount > 0)
+                {
+                    Debug.Log($"timtest Trigger heal");
+                    ChangeHealth(preHealAmount);
+                }
+            });
             AkSoundEngine.PostEvent(SoundEffects.DrinkingRound, GameManager.Instance.gameObject);
             
             DOVirtual.DelayedCall(2f, () =>
             {
-                HandleDrinking(-result);
+                HandleDrinking(-beerDamage);
             });
         }
 
@@ -159,12 +179,16 @@ namespace Player
             }
         }
 
+        public void ChangeHealth(float value)
+        {
+            bar.Initialization();
+            currentHealth += value;
+            bar.UpdateBar01(currentHealth / maxHealth);
+        }
         [Button]
         public void HandleDrinking(float num)
         {
-            bar.Initialization();
-            currentHealth += num;
-            bar.UpdateBar01(currentHealth / maxHealth);
+            ChangeHealth(num);
             if (currentHealth <= 0)
             {
                 DOVirtual.DelayedCall(1f, () =>
@@ -178,6 +202,18 @@ namespace Player
                 {
                     if(isMainPlayer) QuickEvent.DispatchMessage(new ShowPlayerTurnText(true));
                 });
+            }
+        }
+
+        public void SwitchSnackLabel(bool active)
+        {
+            SnackLabel.SetActive(active);
+            var srs = SnackLabel.GetComponentsInChildren<SpriteRenderer>();
+            if (active)
+            {
+                SnackLabel.transform.localScale = Vector3.zero;
+                SnackLabel.transform.DOScale(Vector3.one, 1);
+                srs[0].transform.DORotate(Vector3.forward, 20);
             }
         }
     }

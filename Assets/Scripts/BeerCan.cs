@@ -34,7 +34,7 @@ public class BeerCan : MonoBehaviour
     [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _ballPerSecond = 0;
     [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _rateCounter = 0;
     [BoxGroup("Debug"), ShowInInspector, ReadOnly] private float _dispenseRate = 0;
-    private List<GameObject> fluidParticle = new List<GameObject>();
+    public List<GameObject> fluidParticle = new List<GameObject>();
 
     // **New Variables for Sound Management**
     private bool _isPouringSoundPlaying = false; // Tracks if the pouring sound is currently playing

@@ -1,5 +1,6 @@
  using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using ImprovedTimers;
 using Sirenix.OdinInspector;
 using TimToolBox.DebugTool;
@@ -31,7 +32,9 @@ public class BeerGlass : MonoBehaviour
     public int fullGlassMaxCount = 300;
     public float volumePerFluid = 10;
 
+    private List<GameObject> fluidParticles = new List<GameObject>();
     private List<FoamParticle> foamParticle = new List<FoamParticle>();
+    private List<GameObject> specialParticle = new List<GameObject>();
     private bool hasDispatchedFullEvent = false;
 
     [BoxGroup("Foam")] public int foamFormingInfluxMin;
@@ -44,6 +47,7 @@ public class BeerGlass : MonoBehaviour
     [BoxGroup("Debug"), ShowInInspector, ReadOnly] public int generatedFoamCount = 0;
     [BoxGroup("Debug"), ShowInInspector, ReadOnly] public int fluidCount = 0;
     [BoxGroup("Debug"), ShowInInspector, ReadOnly] public float lastFluidCount = 0;
+    [BoxGroup("Debug"), ShowInInspector, ReadOnly] public int snakeCount;
     
     private void Awake()
     {
@@ -69,20 +73,36 @@ public class BeerGlass : MonoBehaviour
         generatedFoamCount = 0;
         fluidCount = 0;
         hasDispatchedFullEvent = false; // 重置状态
+        _airCount = 0;
+        snakeCount = 0;
     }
 
     public float GetBeerVolumeResult()
     {
         return volumePerFluid * (fluidCount);
     }
-    
+
+    public float GetSnakeMultiplier()
+    {
+        return snakeCount * .5f + 1;   
+    }
     public void CleanUpParticle()
     {
+        foreach (var go in fluidParticles)
+        {
+            FluidParticlePool.Singleton.ReleaseFluidParticle(go);
+        }
+        fluidParticles.Clear();
         foreach (var fp in foamParticle)
         {
             FoamParticlePool.Singleton.ReleaseFoamParticle(fp);
         }
         foamParticle.Clear();
+        foreach (var g in specialParticle)
+        {
+            Destroy(g);
+        }
+        specialParticle.Clear();
     }
 
     private void Update()
@@ -133,12 +153,36 @@ public class BeerGlass : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (IsGlassFull()) return;
-        fluidCount += 1;
-        //加球后尝试结算
-        CheckGlassFull();
+        if (!other) return;
+        
+        if (other.gameObject.layer == LayerMask.NameToLayer("Fluids"))
+        {
+            if (IsGlassFull()) return;
+            fluidCount += 1;
+            fluidParticles.Add(other.gameObject);
+            //加球后尝试结算
+            CheckGlassFull();
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("SpecialItem"))
+        {
+            specialParticle.Add(other.gameObject);
+            if (other.gameObject.CompareTag("Snake")) snakeCount += 1;
+            else if (other.gameObject.CompareTag("ChopStick"))
+            {
+                foreach (var fp in foamParticle)
+                {
+                    fp.Fade();
+                }
+                foamParticle.Clear();
+                generatedFoamCount = 0;
+            }
+            else if (other.gameObject.CompareTag("Mentos"))
+            {
+                GenerateFoamParticle(generatedFoamCount);
+            }
+        }
     }
-
+    
     private bool CheckGlassFull()
     {
         var isFull = IsGlassFull();
@@ -154,6 +198,45 @@ public class BeerGlass : MonoBehaviour
     {
         return generatedFoamCount + fluidCount >= fullGlassMaxCount;
     }
+
+    public void TriggerLiftTable(Player.Player player)
+    {
+        Sequence seq = DOTween.Sequence();
+        var orign = transform.position;
+        
+        Reset();
+        
+        //clear all particle
+        seq.Append(transform.DOMove(orign.Offset(y:5), 0.5f));
+        seq.AppendCallback(() =>
+        {
+            player.beerGlass.CleanUpParticle();
+            player.beerCan.CleanUpParticle();
+        });
+        seq.Append(transform.DOMove(orign, 1f));
+    }
+    public void TriggerSwitchBeerAndFoam()
+    {
+        var tmpFluid = new List<GameObject>();
+        foreach (var fp in foamParticle)
+        {
+            GameObject fluid = FluidParticlePool.Singleton.GetFluidParticle();
+            fluid.transform.position = fp.transform.position;
+            tmpFluid.Add(fluid);
+        }
+        var tmpFoam = new List<FoamParticle>();
+        foreach (var fp in fluidParticles)
+        {
+            FoamParticle foamParticle = FoamParticlePool.Singleton.GetFoamParticle();
+            foamParticle.transform.position = fp.transform.position;
+            tmpFoam.Add(foamParticle);
+        }
+        this.CleanUpParticle();
+        foamParticle = tmpFoam;
+        fluidParticles = tmpFluid;
+        generatedFoamCount = foamParticle.Count;
+        fluidCount = fluidParticles.Count;
+    }
     
     public void GenerateFoamParticle(int count)
     {
@@ -162,7 +245,7 @@ public class BeerGlass : MonoBehaviour
         {
             var genPos = generationTransform.position.Offset(x: Mathf.Lerp(-foamLineLength / 2f, foamLineLength / 2f, Random.Range(0f, 1f)));
 
-            FoamParticle fp =FoamParticlePool.Singleton.GetFoamParticle();
+            FoamParticle fp = FoamParticlePool.Singleton.GetFoamParticle();
             fp.transform.position = genPos;
             var direction = generationTransform.up;
             direction = Quaternion.AngleAxis(Random.Range(-generationRandomAngle, generationRandomAngle),Vector3.forward) * direction;
