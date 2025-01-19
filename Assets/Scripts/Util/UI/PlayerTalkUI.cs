@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 namespace Util.UI
@@ -8,7 +7,7 @@ namespace Util.UI
     {
         public TMP_Text text;
 
-        public void Talk(List<string> list)
+        public void Talk(string str)
         {
             
         }
