@@ -18,8 +18,8 @@ namespace Util.UI
         {
             QuickEvent.SubscribeListener<ShowPlayerTurnText>(ShowPlayerTurnText);
             QuickEvent.SubscribeListener<DrinkingEvent>(HandleDrinking);
-            // AkUnitySoundEngine.PostEvent(SoundEffects.InGameBgm, GameManager.Instance.gameObject);
-            // AkUnitySoundEngine.PostEvent(SoundEffects.InGameAmbBar, GameManager.Instance.gameObject);
+            AkSoundEngine.PostEvent(SoundEffects.InGameBgm, GameManager.Instance.gameObject);
+            AkSoundEngine.PostEvent(SoundEffects.InGameAmbBar, GameManager.Instance.gameObject);
         }
 
         private void OnDisable()
