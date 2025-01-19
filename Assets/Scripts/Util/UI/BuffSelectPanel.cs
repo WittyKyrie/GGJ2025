@@ -1,4 +1,6 @@
-﻿using DG.Tweening;
+﻿using System.Collections.Generic;
+using Buff;
+using DG.Tweening;
 using Febucci.UI;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -19,6 +21,7 @@ namespace Util.UI
         public TypewriterByCharacter blue;
 
         public SimpleUIAnimation simpleUIAnimation;
+        public List<SingleBuffSelect> singleBuffSelects = new();
 
         private void OnEnable()
         {
@@ -34,6 +37,20 @@ namespace Util.UI
         [Button]
         public void ShowMainPlayerSelect()
         {
+            var buffList = BuffDataInfo.GetRandomBuffData(3);
+            GameManager.Instance.mainPlayer.Buffs = buffList;
+            var operateList = new List<string>()
+            {
+                "Q",
+                "W",
+                "E"
+            };
+
+            for (int i = 0; i < 3; i++)
+            {
+                singleBuffSelects[i].Init(buffList[i], operateList[i]);
+            }
+            
             selectObj.gameObject.SetActive(true);
             simpleUIAnimation.DoBornAnimation().OnComplete(() =>
             {
@@ -46,7 +63,23 @@ namespace Util.UI
         [Button]
         public void ShowSubPlayerSelect()
         {
+            var buffList = BuffDataInfo.GetRandomBuffData(3);
+            GameManager.Instance.subPlayer.Buffs = buffList;
+            var operateList = new List<string>()
+            {
+                "1",
+                "2",
+                "3"
+            };
+
+            for (int i = 0; i < 3; i++)
+            {
+                singleBuffSelects[i].Init(buffList[i], operateList[i]);
+            }
+            
             selectObj.gameObject.SetActive(true);
+            GameManager.Instance.mainPlayer.InitBuffList();
+            GameManager.Instance.subPlayer.InitBuffList();
             simpleUIAnimation.DoBornAnimation().OnComplete(() =>
             {
                 btn.gameObject.SetActive(true);

@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using Febucci.UI;
 using Sirenix.OdinInspector;
+using Spine.Unity;
 using UnityEngine;
 using Util.EventHandleSystem;
 
@@ -11,9 +12,12 @@ namespace Util.UI
         public TypewriterByCharacter red;
         public TypewriterByCharacter blue;
 
+        public SkeletonAnimation spine;
+
         private void OnEnable()
         {
             QuickEvent.SubscribeListener<ShowPlayerTurnText>(ShowPlayerTurnText);
+            QuickEvent.SubscribeListener<DrinkingEvent>(HandleDrinking);
             // AkUnitySoundEngine.PostEvent(SoundEffects.InGameBgm, GameManager.Instance.gameObject);
             // AkUnitySoundEngine.PostEvent(SoundEffects.InGameAmbBar, GameManager.Instance.gameObject);
         }
@@ -21,6 +25,21 @@ namespace Util.UI
         private void OnDisable()
         {
             QuickEvent.UnsubscribeListener<ShowPlayerTurnText>(ShowPlayerTurnText);
+            QuickEvent.UnsubscribeListener<DrinkingEvent>(HandleDrinking);
+        }
+
+        private void HandleDrinking(DrinkingEvent e)
+        {
+            DOVirtual.DelayedCall(0.5f, () =>
+            {
+                spine.gameObject.SetActive(true);
+                spine.AnimationState.SetAnimation(0, "animation", false);
+            });
+            
+            DOVirtual.DelayedCall(2.5f, () =>
+            {
+                spine.gameObject.SetActive(false);
+            });
         }
 
         [Button]
@@ -32,6 +51,7 @@ namespace Util.UI
                 red.StartShowingText();
                 DOVirtual.DelayedCall(1, () =>
                 {
+                    red.onTextDisappeared.RemoveAllListeners();
                     red.onTextDisappeared.AddListener(() =>
                     {
                         GameManager.Instance.ChangeState(GameState.MainPlayerTurn);
@@ -46,6 +66,7 @@ namespace Util.UI
                 blue.StartShowingText();
                 DOVirtual.DelayedCall(1, () =>
                 {
+                    blue.onTextDisappeared.RemoveAllListeners();
                     blue.onTextDisappeared.AddListener(() =>
                     {
                         GameManager.Instance.ChangeState(GameState.SubPlayerTurn);

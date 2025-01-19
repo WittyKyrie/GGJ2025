@@ -113,6 +113,7 @@ public class GameManager : Singleton<GameManager>
 
     private void HandleDrinking()
     {
+        QuickEvent.DispatchMessage(new DrinkingEvent());
         mainPlayer.Drinking();
         subPlayer.Drinking();
         // 处理喝酒阶段

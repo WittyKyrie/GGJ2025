@@ -31,4 +31,8 @@ namespace Util.EventHandleSystem
     public struct BeerIsFullEvent
     {
     }
+    
+    public struct DrinkingEvent
+    {
+    }
 }

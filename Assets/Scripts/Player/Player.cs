@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Buff;
 using DG.Tweening;
 using MoreMountains.Tools;
 using Sirenix.OdinInspector;
@@ -13,7 +14,7 @@ namespace Player
         public bool isMainPlayer;
         public float maxHealth = 10000; //最大酒量
         public float currentHealth = 10000; //当前酒量
-        public List<Buff.Buff> Buffs = new(); //道具列表
+        public List<BuffData> Buffs = new(); //道具列表
         public MMProgressBar bar;
         public PlayerBuffList playerBuffList;
         public BeerGlass beerGlass;
@@ -47,14 +48,21 @@ namespace Player
         public void Drinking()
         {
             playerBuffList.gameObject.SetActive(false);
-            bar.gameObject.SetActive(true);
             var result = beerGlass.GetBeerVolumeResult();
             beerGlass.Reset();
+            beerGlass.gameObject.SetActive(false);
+            beerCan.gameObject.SetActive(false);
+            bar.gameObject.SetActive(true);
             
-            DOVirtual.DelayedCall(1f, () =>
+            DOVirtual.DelayedCall(2f, () =>
             {
                 HandleDrinking(-result);
             });
+        }
+
+        public void InitBuffList()
+        {
+            playerBuffList.Init(Buffs);
         }
 
         private void MainPlayerTurn(MainPlayerTurn e)
@@ -107,7 +115,10 @@ namespace Player
             }
             else
             {
-                if(isMainPlayer) QuickEvent.DispatchMessage(new ShowPlayerTurnText(true));
+                DOVirtual.DelayedCall(0.5f, () =>
+                {
+                    if(isMainPlayer) QuickEvent.DispatchMessage(new ShowPlayerTurnText(true));
+                });
             }
         }
     }
