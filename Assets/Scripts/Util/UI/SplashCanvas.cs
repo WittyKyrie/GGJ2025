@@ -15,6 +15,7 @@ namespace Util.UI
         public string spineAnimationName = "animation"; // 您的 Spine 动画名称
 
         private AsyncOperation asyncLoad;
+        public SimpleUIAnimation simpleUIAnimation;
 
         void Start()
         {
@@ -124,8 +125,20 @@ namespace Util.UI
 
         public void AboutUs()
         {
+            simpleUIAnimation.gameObject.SetActive(true);
+            AkSoundEngine.PostEvent(SoundEffects.Click, GameManager.Instance.gameObject);
+            // 实现您的关于我们逻辑
+            simpleUIAnimation.DoBornAnimation();
+        }
+        
+        public void ExitAboutUs()
+        {
             AkSoundEngine.PostEvent(SoundEffects.NormalClick, GameManager.Instance.gameObject);
             // 实现您的关于我们逻辑
+            simpleUIAnimation.DoDieAnimation().OnComplete(() =>
+            {
+                simpleUIAnimation.gameObject.SetActive(false);
+            });
         }
 
         public void Exit()
