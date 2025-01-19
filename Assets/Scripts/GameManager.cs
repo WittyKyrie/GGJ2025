@@ -23,6 +23,7 @@ public class GameManager : Singleton<GameManager>
     
     private GameState CurrentState { get; set; }
 
+    public GameState GetCurrentState() => CurrentState;
     public delegate void OnStateChange(GameState newState);
     public event OnStateChange StateChangeEvent;
 
@@ -97,12 +98,15 @@ public class GameManager : Singleton<GameManager>
     private void HandlePlayer1Turn()
     {
         QuickEvent.DispatchMessage(new MainPlayerTurn());
+        BindItemKeys();
         // 处理 Player1 操作
     }
 
     private void HandlePlayer2Turn()
     {
         QuickEvent.DispatchMessage(new SubPlayerTurn());
+        BindItemKeys();
+        mainPlayer.EndItemOnPour();
         // 处理 Player2 操作
     }
 
@@ -114,8 +118,14 @@ public class GameManager : Singleton<GameManager>
     private void HandleDrinking()
     {
         QuickEvent.DispatchMessage(new DrinkingEvent());
+        UnBindItemKeys();
+        subPlayer.EndItemOnPour();
+        
         mainPlayer.Drinking();
         subPlayer.Drinking();
+        
+        mainPlayer.EndItemOnRound();
+        subPlayer.EndItemOnRound();
         // 处理喝酒阶段
     }
 
@@ -127,6 +137,26 @@ public class GameManager : Singleton<GameManager>
     //启用道具按钮
     private void BindItemKeys()
     {
-        //InputReader.Instance.OnP1Skill1KeyInput
+        UnBindItemKeys();
+        InputReader.Instance.OnP1Skill1KeyInput += (state)=> OnItemKeyChanged(0,0,state);
+        InputReader.Instance.OnP1Skill2KeyInput += (state)=> OnItemKeyChanged(0,1,state);
+        InputReader.Instance.OnP1Skill3KeyInput += (state)=> OnItemKeyChanged(0,2,state);
+        InputReader.Instance.OnP2Skill1KeyInput += (state)=> OnItemKeyChanged(1,0,state);
+        InputReader.Instance.OnP2Skill2KeyInput += (state)=> OnItemKeyChanged(1,1,state);
+        InputReader.Instance.OnP2Skill3KeyInput += (state)=> OnItemKeyChanged(1,2,state);
+    }
+    private void UnBindItemKeys()
+    {
+        InputReader.Instance.ClearItemKeys();
+    }
+
+    private void OnItemKeyChanged(int playerIndex, int itemIndex, InputReader.KeyState state)
+    {
+        if (state == InputReader.KeyState.Down)
+        {
+            Debug.Log($"titmest playerIndex:{playerIndex} itemIndex:{itemIndex}");
+            var player = playerIndex == 0 ? Instance.mainPlayer : Instance.subPlayer;
+            player.UseItem(itemIndex);
+        }
     }
 }

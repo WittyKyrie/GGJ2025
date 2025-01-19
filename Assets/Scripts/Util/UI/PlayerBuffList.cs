@@ -8,11 +8,11 @@ namespace Util.UI
     {
         public List<SingleBuffUI> buffs = new();
 
-        public void Init(List<BuffData> datas)
+        public void UpdateBuffUI(BuffInstance[] instances)
         {
             for (int i = 0; i < 3; i++)
             {
-                buffs[i].Init(datas[i]);
+                buffs[i].UpdateDisplay(instances[i]);
             }
         }
     }
