@@ -4,6 +4,13 @@
 		<WorkUnit Name="Default Work Unit" ID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}" PersistMode="Standalone">
 			<ChildrenList>
 				<ActorMixer Name="Bubble_Game" ID="{D7409620-790C-4E48-AA49-1619E38856FF}" ShortID="511265429">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
