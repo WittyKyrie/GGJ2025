@@ -123,4 +123,10 @@ public class GameManager : Singleton<GameManager>
     {
         QuickEvent.DispatchMessage(new SettlementEvent());
     }
+
+    //启用道具按钮
+    private void BindItemKeys()
+    {
+        //InputReader.Instance.OnP1Skill1KeyInput
+    }
 }
