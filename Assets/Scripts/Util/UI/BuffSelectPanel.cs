@@ -89,6 +89,7 @@ namespace Util.UI
                 btn.onClick.RemoveAllListeners();
                 btn.onClick.AddListener(() =>
                 {
+                    AkSoundEngine.PostEvent(SoundEffects.NormalClick, GameManager.Instance.gameObject);
                     simpleUIAnimation.DoDieAnimation().OnComplete(() =>
                     {
                         QuickEvent.DispatchMessage(new ShowPlayerTurnText(true));
@@ -128,6 +129,7 @@ namespace Util.UI
             btn.gameObject.SetActive(false);
             redBck.SetActive(true);
             blueBck.SetActive(false);
+            AkSoundEngine.PostEvent(SoundEffects.NormalClick, GameManager.Instance.gameObject);
 
             blue.gameObject.SetActive(true);
             blue.StartShowingText();

@@ -1,5 +1,7 @@
-﻿using MoreMountains.Tools;
+﻿using DG.Tweening;
+using MoreMountains.Tools;
 using UnityEngine;
+using UnityEngine.UI;
 using Util.EventHandleSystem;
 
 namespace Util.UI
@@ -8,6 +10,16 @@ namespace Util.UI
     {
         public GameObject content;
         public SimpleUIAnimation uIAnimation;
+
+        public GameObject img1;
+        public GameObject img2;
+        public GameObject img3;
+
+        public Sprite redWin;
+        public Sprite blueWin;
+        public Sprite redBlue;
+
+        public Image imgWin;
         
         private void OnEnable()
         {
@@ -22,19 +34,38 @@ namespace Util.UI
         private void ShowSettlement(SettlementEvent e)
         {
             uIAnimation.DoBornAnimation();
-            content.SetActive(true);
-            if (GameManager.Instance.mainPlayer.currentHealth > GameManager.Instance.subPlayer.currentHealth)
+            
+            img1.SetActive(true);
+
+            DOVirtual.DelayedCall(2, () =>
             {
-                Debug.LogWarning("红方胜");
-            }
-            else if(GameManager.Instance.mainPlayer.currentHealth < GameManager.Instance.subPlayer.currentHealth)
+                img2.SetActive(true);
+            });
+            
+            DOVirtual.DelayedCall(4, () =>
             {
-                Debug.LogWarning("蓝方胜");
-            }
-            else
+                img3.SetActive(true);
+                content.SetActive(true);
+            });
+            
+            DOVirtual.DelayedCall(6, () =>
             {
-                Debug.LogWarning("平局胜");
-            }
+                imgWin.gameObject.SetActive(true);
+                imgWin.rectTransform.DOScale(3, 1f).SetEase(Ease.OutBack);
+                
+                if (GameManager.Instance.mainPlayer.currentHealth > GameManager.Instance.subPlayer.currentHealth)
+                {
+                    imgWin.sprite = redWin;
+                }
+                else if(GameManager.Instance.mainPlayer.currentHealth < GameManager.Instance.subPlayer.currentHealth)
+                {
+                    imgWin.sprite = blueWin;
+                }
+                else
+                {
+                    imgWin.sprite = redBlue;
+                }
+            });
         }
 
         public void ReturnHome()

@@ -22,6 +22,37 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="sfx_cut_sence" ID="{FF8C9702-C64F-4D29-A332-3FBE1F510E88}" ShortID="187316150">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_cut_sence" ID="{BCEA02D6-6A60-48F9-AB59-A876C346F0A9}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_cut_sence.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="139832732"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="sfx_cut_sence_01" ID="{67A0444D-B29F-439C-A82D-9EF197A42EE5}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_cut_sence.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="139832732"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_cut_sence_01" ID="{67A0444D-B29F-439C-A82D-9EF197A42EE5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="In_Game" ID="{85812329-E737-466E-962A-50B8899A4250}" ShortID="568626384">
 							<ReferenceList>
@@ -53,6 +84,11 @@
 										<Sound Name="bgm_ingame_3" ID="{D6A22471-1308-494A-B1B0-F6CFD803B1D9}" ShortID="19483378">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -73,31 +109,6 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Funky On" ID="{7F8C9B18-27DD-475A-A4E5-4C9B22B88290}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="bgm_ingame_1" ID="{FA4F7C21-943B-4F6A-ACF3-1EE3051B2605}" ShortID="659633736">
-											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="1" ID="{5EFFDAA0-AD02-4482-8D61-477EEA9A5E05}">
-													<Language>SFX</Language>
-													<AudioFile>1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="418813728"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="1" ID="{5EFFDAA0-AD02-4482-8D61-477EEA9A5E05}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="bgm_ingame_2" ID="{36A4B9BD-6999-4BC2-A6C3-52CD30ADE2BB}" ShortID="1053933984">
@@ -125,11 +136,46 @@
 												<ActiveSource Name="Funky (full version)" ID="{9494834C-B390-4C5F-A953-C07F8EE4E9E3}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="bgm_ingame_1" ID="{FA4F7C21-943B-4F6A-ACF3-1EE3051B2605}" ShortID="659633736">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="1" ID="{5EFFDAA0-AD02-4482-8D61-477EEA9A5E05}">
+													<Language>SFX</Language>
+													<AudioFile>1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="418813728"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="1" ID="{5EFFDAA0-AD02-4482-8D61-477EEA9A5E05}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
 								<Sound Name="sfx_amb_bar" ID="{67DD0D61-7C81-4B7C-A6CB-C09F8771D92A}" ShortID="352382741">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -152,10 +198,37 @@
 										<ActiveSource Name="sfx_amb_bar" ID="{045967E8-5AE0-41A3-896C-E46C7FD006D8}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Pouring Fizzy Beverage" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" ShortID="572125757">
+								<Sound Name="sfx_pouring_beer" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" ShortID="572125757">
+									<PropertyList>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5EED6E76-BB4B-4D12-95BE-4A9FBB109CB5}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+											<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
@@ -174,6 +247,107 @@
 										<ActiveSource Name="Pouring Fizzy Beverage" ID="{26A25169-9E67-4F9B-9FF8-2E98D5B26C9B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="sfx_beer_cheers" ID="{640A6110-9D20-4E62-93DC-392E20BBC4AC}" ShortID="197982703">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_beer_cheers" ID="{9E27AD67-DA57-4291-AF25-05652D293863}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_beer_cheers.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="512534011"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="sfx_beer_cheers_01" ID="{5AFD0336-510F-4DA2-8293-9ED81B76F29A}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_beer_cheers.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="512534011"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_beer_cheers_01" ID="{5AFD0336-510F-4DA2-8293-9ED81B76F29A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_round_notice" ID="{D57AC62B-9008-4C9B-A1EA-03BC29C9DE1E}" ShortID="139222684">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_round_notice" ID="{7671FC69-D6F9-42A1-8676-0D3A72D92918}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_round_notice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="933675984"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="sfx_round_notice_01" ID="{24BCB237-F1DF-445D-B4E4-3DDA06F67914}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_round_notice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="933675984"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_round_notice_01" ID="{24BCB237-F1DF-445D-B4E4-3DDA06F67914}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_drinking_round" ID="{0B125933-3A12-4ED4-AC10-D400CC0C977F}" ShortID="875024068">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_drinking_round" ID="{2C06EA8F-2D3B-4610-A972-C3F23D932DAF}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_drinking_round.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="914774554"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="sfx_drinking_round_01" ID="{B9E3414B-55BA-43F9-AF19-E5A1EC710F03}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_drinking_round.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="914774554"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="sfx_drinking_round_02" ID="{D3E7E875-C437-45ED-991A-BE66350E530D}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_drinking_round.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="914774554"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_drinking_round_02" ID="{D3E7E875-C437-45ED-991A-BE66350E530D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Menu" ID="{9DE1DC1A-A440-4327-B86F-82D5A6C9DE87}" ShortID="459973723">
@@ -187,6 +361,15 @@
 							</ReferenceList>
 							<ChildrenList>
 								<Sound Name="sfx_click_start" ID="{BAED96C3-7B72-4DB8-8E07-C0343717B0DC}" ShortID="321544888">
+									<PropertyList>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
@@ -376,6 +559,50 @@
 										</Sound>
 									</ChildrenList>
 								</BlendContainer>
+								<Sound Name="sfx_click_normal" ID="{8E69FAB5-CA1D-4E53-B298-942B2A49F270}" ShortID="446691343">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{4941CB8B-2493-45D5-9DDD-D60A0A80D3DF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="150"/>
+															<Property Name="Min" Type="Real64" Value="-150"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_click_normal" ID="{94AAE32E-1446-48D3-BD57-7A2EF50714DC}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_click_normal.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="601434585"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="sfx_click_normal_01" ID="{C4480A79-B144-4B9A-9537-D782DB8F5A70}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_click_normal.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="601434585"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_click_normal_01" ID="{C4480A79-B144-4B9A-9537-D782DB8F5A70}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 					</ChildrenList>

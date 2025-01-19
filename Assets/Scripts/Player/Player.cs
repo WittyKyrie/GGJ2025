@@ -7,6 +7,7 @@ using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Util;
 using Util.EventHandleSystem;
 using Util.UI;
 
@@ -75,6 +76,8 @@ namespace Player
                     ChangeHealth(preHealAmount);
                 }
             });
+            AkSoundEngine.PostEvent(SoundEffects.DrinkingRound, GameManager.Instance.gameObject);
+            
             DOVirtual.DelayedCall(2f, () =>
             {
                 HandleDrinking(-beerDamage);
@@ -141,7 +144,10 @@ namespace Player
             {
                 beerGlass.gameObject.SetActive(false);
                 beerCan.gameObject.SetActive(true);
-                beerCan.BindP1();
+                DOVirtual.DelayedCall(1, () =>
+                {
+                    beerCan.BindP1();
+                });
             }
             else
             {
@@ -160,7 +166,10 @@ namespace Player
             {
                 beerGlass.gameObject.SetActive(false);
                 beerCan.gameObject.SetActive(true);
-                beerCan.BindP2();
+                DOVirtual.DelayedCall(1, () =>
+                {
+                    beerCan.BindP2();
+                });
             }
             else
             {
@@ -182,11 +191,14 @@ namespace Player
             ChangeHealth(num);
             if (currentHealth <= 0)
             {
-                GameManager.Instance.ChangeState(GameState.Settlement);
+                DOVirtual.DelayedCall(1f, () =>
+                {
+                    GameManager.Instance.ChangeState(GameState.Settlement);
+                });
             }
             else
             {
-                DOVirtual.DelayedCall(0.5f, () =>
+                DOVirtual.DelayedCall(1f, () =>
                 {
                     if(isMainPlayer) QuickEvent.DispatchMessage(new ShowPlayerTurnText(true));
                 });
