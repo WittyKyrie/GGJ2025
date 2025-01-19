@@ -14,8 +14,8 @@ namespace Util.UI
         private void OnEnable()
         {
             QuickEvent.SubscribeListener<ShowPlayerTurnText>(ShowPlayerTurnText);
-            AkUnitySoundEngine.PostEvent(SoundEffects.InGameBgm, GameManager.Instance.gameObject);
-            AkUnitySoundEngine.PostEvent(SoundEffects.InGameAmbBar, GameManager.Instance.gameObject);
+            // AkUnitySoundEngine.PostEvent(SoundEffects.InGameBgm, GameManager.Instance.gameObject);
+            // AkUnitySoundEngine.PostEvent(SoundEffects.InGameAmbBar, GameManager.Instance.gameObject);
         }
 
         private void OnDisable()

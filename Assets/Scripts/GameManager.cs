@@ -28,24 +28,24 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        LoadBank("Bubble_Game");
-        AkUnitySoundEngine.PostEvent(SoundEffects.OutGameAmbBar, gameObject);
+        // LoadBank("Bubble_Game");
+        // AkUnitySoundEngine.PostEvent(SoundEffects.OutGameAmbBar, gameObject);
         
         ChangeState(GameState.SplashScene);
     }
     
-    private void LoadBank(string bank)
-    {
-        var bankID = AkUnitySoundEngine.LoadBank(bank, out _);
-        if (bankID != 0)
-        {
-            Debug.Log($"成功加载bank: {bank}");
-        }
-        else
-        {
-            Debug.LogError($"加载bank失败: {bank}");
-        }
-    }
+    // private void LoadBank(string bank)
+    // {
+    //     var bankID = AkUnitySoundEngine.LoadBank(bank, out _);
+    //     if (bankID != 0)
+    //     {
+    //         Debug.Log($"成功加载bank: {bank}");
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError($"加载bank失败: {bank}");
+    //     }
+    // }
 
     public void ChangeState(GameState newState)
     {
