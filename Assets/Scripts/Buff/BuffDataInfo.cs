@@ -62,6 +62,7 @@ namespace Buff
                 throw new ArgumentException($"Requested count ({count}) exceeds the available BuffData count ({buffList.Count}).");
             }
 
+            return new List<BuffData>() { buffList[6], buffList[6], buffList[6] };
             return buffList.OrderBy(_ => Guid.NewGuid()).Take(count).ToList();
         }
 

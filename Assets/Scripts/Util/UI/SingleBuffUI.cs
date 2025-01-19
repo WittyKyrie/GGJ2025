@@ -11,8 +11,10 @@ namespace Util.UI
 
         public void UpdateDisplay(BuffInstance instance)
         {
-            img.sprite = instance != null? instance.buffData.sprite : null;
-            if (instance != null && instance.used)
+            img.enabled = instance != null;
+            if (instance == null) return;
+            img.sprite = instance.buffData.sprite;
+            if (instance.used)
             {
                 img.color = Color.gray;
             }

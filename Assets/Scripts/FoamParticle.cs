@@ -35,4 +35,11 @@ public class FoamParticle : MonoBehaviour
         // Apply the buoyancy force upwards
         rb.AddForce(Vector2.up * buoyancyForce);
     }
+
+    public void Fade()
+    {
+        Sequence seq = DOTween.Sequence();
+        seq.Append(transform.DOScale(0f, 1f));
+        seq.AppendCallback(()=>FoamParticlePool.Singleton.ReleaseFoamParticle(this));
+    }
 }
