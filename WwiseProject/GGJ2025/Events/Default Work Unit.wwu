@@ -89,6 +89,109 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_sfx_pouring_beer" ID="{0DF434EB-8323-4328-9A0B-06A2C0F3EC24}">
+					<ChildrenList>
+						<Action Name="" ID="{ED18D131-CCF7-4516-8010-A693E4FE35B0}" ShortID="640781589">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_pouring_beer" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AE1A2811-7FCD-4F10-A3D0-4A954EC97F36}" ShortID="1046751046">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_pouring_beer" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_click_normal" ID="{AB937BD6-FD4A-423D-8A06-AC791CCD7551}">
+					<ChildrenList>
+						<Action Name="" ID="{FCEE5A9E-1FE3-432C-A675-4AB9B5BA1F8E}" ShortID="534890861">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_click_normal" ID="{8E69FAB5-CA1D-4E53-B298-942B2A49F270}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_cut_sence" ID="{4C718358-DF75-4D0F-9040-3F05E9E56853}">
+					<ChildrenList>
+						<Action Name="" ID="{5DDE06C0-7D38-43F7-9BC2-6AC6E8704D86}" ShortID="736421911">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_cut_sence" ID="{FF8C9702-C64F-4D29-A332-3FBE1F510E88}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_sfx_pouring_beer" ID="{8AF22C1C-8BD9-4AA6-B028-3E9E9E40B309}">
+					<ChildrenList>
+						<Action Name="" ID="{BB0CB4C8-BE53-4953-A176-98E6F58C3527}" ShortID="438855161">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_pouring_beer" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_round_notice" ID="{60AC15C7-44B6-49A1-9AD2-124C2C4C6B7F}">
+					<ChildrenList>
+						<Action Name="" ID="{E96534F0-B3BA-4C70-BAE4-63F2754BE258}" ShortID="951275426">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_pouring_beer" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3B316ABF-A51A-4632-9853-54991045DE04}" ShortID="155219095">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_round_notice" ID="{D57AC62B-9008-4C9B-A1EA-03BC29C9DE1E}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_sfx_drinking_round" ID="{FEDF62F2-3F20-493A-ADE8-D1ED758EE234}">
+					<ChildrenList>
+						<Action Name="" ID="{462DE2A7-1DFA-4F03-9FF0-D75AC18D776C}" ShortID="349686774">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_pouring_beer" ID="{69D45DB1-2A26-4D08-B3F4-AB65DAEB8D2B}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{561A9670-D0F1-431C-A704-67A7FB1BF439}" ShortID="322612364">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="sfx_drinking_round" ID="{0B125933-3A12-4ED4-AC10-D400CC0C977F}" WorkUnitID="{FC4BF425-B6AF-4DB3-8D3E-0F15F96B8B3A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
