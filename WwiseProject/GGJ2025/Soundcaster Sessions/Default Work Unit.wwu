@@ -1,28 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{D19FDA16-2B30-482A-8564-6A79BF626535}" SchemaVersion="123">
+<WwiseDocument Type="WorkUnit" ID="{51C4C1FA-CBB5-4465-835B-9D86CE44DAAF}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{D19FDA16-2B30-482A-8564-6A79BF626535}" PersistMode="Standalone">
-			<ChildrenList>
-				<SoundcasterSession Name="Test" ID="{5C4D6191-1506-430A-A006-61BB270627B9}">
-					<ModuleList>
-						<Module>
-							<ObjectRef Name="Play_sfx_amb_bar_menu" ID="{2B01B93D-D660-444D-833B-7C30D12A7431}" WorkUnitID="{275D85B3-313C-40E7-8DF7-353777ECAA52}"/>
-							<Position X="0" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_sfx_amb_bar_ingame" ID="{BA385942-880F-4A31-842F-A70833EEAC20}" WorkUnitID="{275D85B3-313C-40E7-8DF7-353777ECAA52}"/>
-							<Position X="1" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_bgm_ingame" ID="{A6330103-6062-4E0F-9FD3-B93C3E3D6106}" WorkUnitID="{275D85B3-313C-40E7-8DF7-353777ECAA52}"/>
-							<Position X="2" Y="0"/>
-						</Module>
-					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
-					<CurrentSwitchList ShowAll="true"/>
-				</SoundcasterSession>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{51C4C1FA-CBB5-4465-835B-9D86CE44DAAF}" PersistMode="Standalone"/>
 	</SoundcasterSessions>
 </WwiseDocument>
