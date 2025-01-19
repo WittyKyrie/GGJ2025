@@ -4540,6 +4540,7 @@ MonoBehaviour:
   red: {fileID: 261444262}
   blue: {fileID: 2105107102}
   spine: {fileID: 990848278}
+  BuffAppear: {fileID: 552958059}
 --- !u!1 &373786227
 GameObject:
   m_ObjectHideFlags: 0

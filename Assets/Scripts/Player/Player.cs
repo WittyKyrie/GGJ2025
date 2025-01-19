@@ -101,6 +101,7 @@ namespace Player
         {
             if (BuffInstance[itemIndex] != null && !BuffInstance[itemIndex].used)
             {
+                QuickEvent.DispatchMessage(new ShowUseBuff(BuffInstance[itemIndex].buffData.key));
                 BuffInstance[itemIndex].OnUseItem();
                 BuffInstance[itemIndex].used = true;
                 playerBuffList.UpdateBuffUI(BuffInstance);

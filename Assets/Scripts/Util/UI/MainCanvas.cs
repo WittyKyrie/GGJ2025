@@ -13,11 +13,13 @@ namespace Util.UI
         public TypewriterByCharacter blue;
 
         public SkeletonAnimation spine;
+        public BuffAppear BuffAppear;
 
         private void OnEnable()
         {
             QuickEvent.SubscribeListener<ShowPlayerTurnText>(ShowPlayerTurnText);
             QuickEvent.SubscribeListener<DrinkingEvent>(HandleDrinking);
+            QuickEvent.SubscribeListener<ShowUseBuff>(HandleBuff);
             AkSoundEngine.PostEvent(SoundEffects.InGameBgm, GameManager.Instance.gameObject);
             AkSoundEngine.PostEvent(SoundEffects.InGameAmbBar, GameManager.Instance.gameObject);
         }
@@ -26,6 +28,13 @@ namespace Util.UI
         {
             QuickEvent.UnsubscribeListener<ShowPlayerTurnText>(ShowPlayerTurnText);
             QuickEvent.UnsubscribeListener<DrinkingEvent>(HandleDrinking);
+            QuickEvent.UnsubscribeListener<ShowUseBuff>(HandleBuff);
+        }
+
+        private void HandleBuff(ShowUseBuff e)
+        {
+            BuffAppear.gameObject.SetActive(true);
+            BuffAppear.Init(e.BuffKey);
         }
 
         private void HandleDrinking(DrinkingEvent e)
