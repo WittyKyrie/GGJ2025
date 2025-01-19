@@ -1,4 +1,5 @@
-﻿using MoreMountains.Tools;
+﻿using DG.Tweening;
+using MoreMountains.Tools;
 using UnityEngine;
 using Util.EventHandleSystem;
 
@@ -8,6 +9,10 @@ namespace Util.UI
     {
         public GameObject content;
         public SimpleUIAnimation uIAnimation;
+
+        public GameObject img1;
+        public GameObject img2;
+        public GameObject img3;
         
         private void OnEnable()
         {
@@ -22,7 +27,20 @@ namespace Util.UI
         private void ShowSettlement(SettlementEvent e)
         {
             uIAnimation.DoBornAnimation();
-            content.SetActive(true);
+            
+            img1.SetActive(true);
+
+            DOVirtual.DelayedCall(2, () =>
+            {
+                img2.SetActive(true);
+            });
+            
+            DOVirtual.DelayedCall(4, () =>
+            {
+                img3.SetActive(true);
+                content.SetActive(true);
+            });
+            
             if (GameManager.Instance.mainPlayer.currentHealth > GameManager.Instance.subPlayer.currentHealth)
             {
                 Debug.LogWarning("红方胜");

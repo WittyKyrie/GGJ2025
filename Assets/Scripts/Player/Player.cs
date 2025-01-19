@@ -165,11 +165,14 @@ namespace Player
             bar.UpdateBar01(currentHealth / maxHealth);
             if (currentHealth <= 0)
             {
-                GameManager.Instance.ChangeState(GameState.Settlement);
+                DOVirtual.DelayedCall(1f, () =>
+                {
+                    GameManager.Instance.ChangeState(GameState.Settlement);
+                });
             }
             else
             {
-                DOVirtual.DelayedCall(0.5f, () =>
+                DOVirtual.DelayedCall(1f, () =>
                 {
                     if(isMainPlayer) QuickEvent.DispatchMessage(new ShowPlayerTurnText(true));
                 });
