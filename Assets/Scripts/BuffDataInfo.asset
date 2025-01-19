@@ -15,11 +15,11 @@ MonoBehaviour:
   buffDataList:
   - key: PropHand
     name: "\u65AD\u6C34\u6D41\u5927\u5E08\u5144"
-    describe: "\u7528\u624B\u6321\u9152\uFF0C\u672C\u8F6E\u5012\u5165\u676F\u4E2D\u7684\u9152\u91CF\u51CF\u534A"
+    describe: "5\u79D2\u5185\u7528\u624B\u6321\u9152(\u7269\u7406\u963B\u6321\uFF09"
     sprite: {fileID: 21300000, guid: 31d1bb99e213ab14daff8710933e7680, type: 3}
   - key: PropSnacks
     name: "\u5C0F\u5403\u62FC\u76D8"
-    describe: "\u6E05\u919210%"
+    describe: "\u9001\u9152\u597D\u7269\uFF0C\u672C\u56DE\u5408\u7ED3\u7B97\u65F6\u51CF\u514D50%\u9152\u7CBE\u4F24\u5BB3"
     sprite: {fileID: 21300000, guid: a23d0c34a301e874ca79518da4a4bd8e, type: 3}
   - key: PropPower
     name: "\u5FAE\u91BA\u7231\u597D\u8005"
@@ -27,7 +27,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: edc24b0971db64040bc071689c8dbe11, type: 3}
   - key: PropSnakes
     name: "\u5E1D\u7687\u773C\u955C\u86C7"
-    describe: "\u836F\u9152\u597D\u4F34\u4FA3\uFF0C\u6295\u653E\u5230\u5F53\u524D\u9152\u676F\uFF0C\u6263\u9664\u9152\u91CF\u65F6\u4F24\u5BB3\u7FFB\u500D"
+    describe: "\u6295\u653E\u5230\u5F53\u524D\u9152\u676F\uFF0C\u6263\u9664\u9152\u91CF\u65F6\u4F24\u5BB3\u7FFB\u500D"
     sprite: {fileID: 21300000, guid: 420a92c726adba24db9b20208247e111, type: 3}
   - key: PropChopsticks
     name: "\u63D2\u7B77\u5B50"
@@ -35,7 +35,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 6214374ca2c81f443a6f32f767ce2588, type: 3}
   - key: PropMTS
     name: "\u66FC\u59A5\u601D"
-    describe: "\u9152\u676F\u5185\u6CE1\u6CAB\u7FFB\u500D"
+    describe: "\u9152\u676F\u5185\u6CE1\u6CAB\u7FFB2\u500D"
     sprite: {fileID: 21300000, guid: f2af466a47d706f44a712668a3df9b24, type: 3}
   - key: PropLiftTable
     name: "\u6380\u684C"
@@ -43,9 +43,5 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 1a7c077aa46bda3419fe754574e19b64, type: 3}
   - key: PropTransform
     name: "\u58F0\u4E1C\u51FB\u897F"
-    describe: "\u5C06\u5BF9\u624B\u676F\u4E2D\u7684\u6CE1\u6CAB\u548C\u9152\u91CF\u5BF9\u8C03"
+    describe: "\u5C06\u5F53\u524D\u9152\u676F\u676F\u4E2D\u7684\u6CE1\u6CAB\u548C\u9152\u91CF\u5BF9\u8C03"
     sprite: {fileID: 21300000, guid: 1b25bd156148c8649a232e970de506bf, type: 3}
-  - key: PropCall
-    name: "\u63A5\u4E2A\u7535\u8BDD"
-    describe: "\u5012\u8BA1\u65F6\u65F6\u95F4\u51CF\u534A"
-    sprite: {fileID: 21300000, guid: eb192d968d21fc24c95d36a603083dd6, type: 3}

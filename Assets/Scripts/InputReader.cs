@@ -34,27 +34,27 @@ public class InputReader : Singleton<InputReader>
         if (Input.GetKeyDown(KeyCode.W)) OnP1Skill2KeyInput?.Invoke(KeyState.Down);
         if (Input.GetKeyDown(KeyCode.E)) OnP1Skill3KeyInput?.Invoke(KeyState.Down);
         if (Input.GetKeyDown(KeyCode.DownArrow)) OnP2PourKeyInput?.Invoke(KeyState.Down);
-        if (Input.GetKeyDown(KeyCode.Keypad1)) OnP2Skill1KeyInput?.Invoke(KeyState.Down);
-        if (Input.GetKeyDown(KeyCode.Keypad2)) OnP2Skill2KeyInput?.Invoke(KeyState.Down);
-        if (Input.GetKeyDown(KeyCode.Keypad3)) OnP2Skill3KeyInput?.Invoke(KeyState.Down);    
+        if (Input.GetKeyDown(KeyCode.J)) OnP2Skill1KeyInput?.Invoke(KeyState.Down);
+        if (Input.GetKeyDown(KeyCode.K)) OnP2Skill2KeyInput?.Invoke(KeyState.Down);
+        if (Input.GetKeyDown(KeyCode.L)) OnP2Skill3KeyInput?.Invoke(KeyState.Down);    
         
         if (Input.GetKey(KeyCode.Space)) OnP1PourKeyInput?.Invoke(KeyState.Hold);
         if (Input.GetKey(KeyCode.Q)) OnP1Skill1KeyInput?.Invoke(KeyState.Hold);
         if (Input.GetKey(KeyCode.W)) OnP1Skill2KeyInput?.Invoke(KeyState.Hold);
         if (Input.GetKey(KeyCode.E)) OnP1Skill3KeyInput?.Invoke(KeyState.Hold);
         if (Input.GetKey(KeyCode.DownArrow)) OnP2PourKeyInput?.Invoke(KeyState.Hold);
-        if (Input.GetKey(KeyCode.Keypad1)) OnP2Skill1KeyInput?.Invoke(KeyState.Hold);
-        if (Input.GetKey(KeyCode.Keypad2)) OnP2Skill2KeyInput?.Invoke(KeyState.Hold);
-        if (Input.GetKey(KeyCode.Keypad3)) OnP2Skill3KeyInput?.Invoke(KeyState.Hold);  
+        if (Input.GetKey(KeyCode.J)) OnP2Skill1KeyInput?.Invoke(KeyState.Hold);
+        if (Input.GetKey(KeyCode.K)) OnP2Skill2KeyInput?.Invoke(KeyState.Hold);
+        if (Input.GetKey(KeyCode.L)) OnP2Skill3KeyInput?.Invoke(KeyState.Hold);  
         
         if (Input.GetKeyUp(KeyCode.Space)) OnP1PourKeyInput?.Invoke(KeyState.Up);
         if (Input.GetKeyUp(KeyCode.Q)) OnP1Skill1KeyInput?.Invoke(KeyState.Up);
         if (Input.GetKeyUp(KeyCode.W)) OnP1Skill2KeyInput?.Invoke(KeyState.Up);
         if (Input.GetKeyUp(KeyCode.E)) OnP1Skill3KeyInput?.Invoke(KeyState.Up);
         if (Input.GetKeyUp(KeyCode.DownArrow)) OnP2PourKeyInput?.Invoke(KeyState.Up);
-        if (Input.GetKeyUp(KeyCode.Keypad1)) OnP2Skill1KeyInput?.Invoke(KeyState.Up);
-        if (Input.GetKeyUp(KeyCode.Keypad2)) OnP2Skill2KeyInput?.Invoke(KeyState.Up);
-        if (Input.GetKeyUp(KeyCode.Keypad3)) OnP2Skill3KeyInput?.Invoke(KeyState.Up);  
+        if (Input.GetKeyUp(KeyCode.J)) OnP2Skill1KeyInput?.Invoke(KeyState.Up);
+        if (Input.GetKeyUp(KeyCode.K)) OnP2Skill2KeyInput?.Invoke(KeyState.Up);
+        if (Input.GetKeyUp(KeyCode.L)) OnP2Skill3KeyInput?.Invoke(KeyState.Up);  
     }
 
     public void ClearItemKeys()

@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMainPlayer: 1
-  maxHealth: 10000
-  currentHealth: 10000
+  maxHealth: 9000
+  currentHealth: 9000
   bar: {fileID: 187145832}
   playerBuffList: {fileID: 6523258726542841994}
   beerGlass: {fileID: 254539041}
@@ -4259,8 +4259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMainPlayer: 0
-  maxHealth: 10000
-  currentHealth: 10000
+  maxHealth: 9000
+  currentHealth: 9000
   bar: {fileID: 928945462}
   playerBuffList: {fileID: 1796697803}
   beerGlass: {fileID: 1937558792}
@@ -14361,6 +14361,14 @@ PrefabInstance:
     - target: {fileID: 6070068761211787852, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102013737757423605, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1058
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102013737757423605, guid: 20ecfa53ee8e36047ad5b64d99eeb8d4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -587
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -120,14 +120,14 @@ public class PropChopsticks : BuffInstance
         Vector3 position = Vector2.zero;
         if (GameManager.Instance.GetCurrentState() == GameState.MainPlayerTurn)
         {
-            position = GameManager.Instance.subPlayer.beerGlass.transform.position.Offset(x:Random.Range(-2f,2f),y:10);
+            position = GameManager.Instance.subPlayer.beerGlass.transform.position.Offset(x:Random.Range(-1f,1f),y:10);
         }
         else if (GameManager.Instance.GetCurrentState() == GameState.SubPlayerTurn)
         {
-            position = GameManager.Instance.mainPlayer.beerGlass.transform.position.Offset(x:Random.Range(-2f,2f),y:10);
+            position = GameManager.Instance.mainPlayer.beerGlass.transform.position.Offset(x:Random.Range(-1f,1f),y:10);
         }
         var prefab = handle.Result;
-        GO = Object.Instantiate(prefab, position,  Quaternion.Euler(0,0,Random.Range(0, 360)));
+        GO = Object.Instantiate(prefab, position,Quaternion.identity);
     }
     public override void OnPourEnd()
     {
