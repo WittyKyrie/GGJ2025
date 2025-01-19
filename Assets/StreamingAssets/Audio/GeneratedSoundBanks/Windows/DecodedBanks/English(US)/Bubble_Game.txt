@@ -1,11 +1,15 @@
 Event	ID	Name			Wwise Object Path	Notes
+	101446109	Play_sfx_prop_use			\Default Work Unit\Play_sfx_prop_use	
 	495583777	Play_sfx_cut_sence			\Default Work Unit\Play_sfx_cut_sence	
 	604102624	Play_sfx_click_normal			\Default Work Unit\Play_sfx_click_normal	
 	1032364325	Play_sfx_round_notice			\Default Work Unit\Play_sfx_round_notice	
 	1695911055	Play_sfx_click_start			\Default Work Unit\Play_sfx_click_start	
 	2167428848	Play_bgm_ingame			\Default Work Unit\Play_bgm_ingame	
+	2517229928	Play_sfx_end_round			\Default Work Unit\Play_sfx_end_round	
+	2568853496	Play_sfx_prop_notice			\Default Work Unit\Play_sfx_prop_notice	
 	2571413926	Play_sfx_amb_bar_menu			\Default Work Unit\Play_sfx_amb_bar_menu	
 	2726246453	Play_sfx_pouring_beer			\Default Work Unit\Play_sfx_pouring_beer	
+	2752235775	Play_sfx_prop_appear			\Default Work Unit\Play_sfx_prop_appear	
 	3282807380	Play_sfx_amb_bar_ingame			\Default Work Unit\Play_sfx_amb_bar_ingame	
 	3700857917	Play_sfx_drinking_round			\Default Work Unit\Play_sfx_drinking_round	
 	4200562683	Stop_sfx_pouring_beer			\Default Work Unit\Stop_sfx_pouring_beer	
@@ -18,15 +22,19 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	70743661	sfx_amb_open_can	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_amb_open_can_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\Menu\sfx_amb_bar_menu\sfx_amb_stinger\sfx_amb_stinger\sfx_amb_open_can		11436
 	139651745	bgm_ingame_3	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\Funky On_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\bgm_ingame\bgm_ingame_3		2187234
 	139832732	sfx_cut_sence	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_cut_sence_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\Cut_Sence\sfx_cut_sence		129283
+	155511779	sfx_prop_appear	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_prop_appear_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_prop_appear		22395
 	225686808	sfx_amb_pour_beer	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_amb_pour_beer_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\Menu\sfx_amb_bar_menu\sfx_amb_stinger\sfx_amb_stinger\sfx_amb_pour_beer		147069
 	306116818	bgm_ingame_2	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\Funky (full version)_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\bgm_ingame\bgm_ingame_2		2199492
 	354479180	sfx_amb_cheer_beer	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_amb_cheer_beer_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\Menu\sfx_amb_bar_menu\sfx_amb_stinger\sfx_amb_stinger\sfx_amb_cheer_beer		8602
+	382344753	sfx_prop_use	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_prop_use_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_prop_use		56146
 	418813728	bgm_ingame_1	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\1_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\bgm_ingame\bgm_ingame_1		2279847
 	449944962	sfx_amb_bar	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_amb_bar_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_amb_bar		577144
 	512534011	sfx_beer_cheers	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_beer_cheers_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_beer_cheers		20245
 	601434585	sfx_click_normal	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_click_normal_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\Menu\sfx_click_normal		2558
 	729234419	sfx_amb_bar_menu	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_amb_bar_menu_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\Menu\sfx_amb_bar_menu\sfx_amb_bar_menu		1339716
+	907306917	sfx_prop_notice	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_prop_notice_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_prop_notice		14185
 	914774554	sfx_drinking_round	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_drinking_round_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_drinking_round		56091
 	933675984	sfx_round_notice	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_round_notice_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_round_notice		9411
 	936146750	sfx_pouring_beer	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\Pouring Fizzy Beverage_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_pouring_beer		491327
+	1031727826	sfx_end_round	Y:\Documents\GitHub\GGJ2025\WwiseProject\GGJ2025\.cache\Windows\SFX\sfx_end_round_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble_Game\In_Game\sfx_end_round		402983
 

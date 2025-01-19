@@ -20,7 +20,11 @@ namespace AK
         static const AkUniqueID PLAY_SFX_CLICK_START = 1695911055U;
         static const AkUniqueID PLAY_SFX_CUT_SENCE = 495583777U;
         static const AkUniqueID PLAY_SFX_DRINKING_ROUND = 3700857917U;
+        static const AkUniqueID PLAY_SFX_END_ROUND = 2517229928U;
         static const AkUniqueID PLAY_SFX_POURING_BEER = 2726246453U;
+        static const AkUniqueID PLAY_SFX_PROP_APPEAR = 2752235775U;
+        static const AkUniqueID PLAY_SFX_PROP_NOTICE = 2568853496U;
+        static const AkUniqueID PLAY_SFX_PROP_USE = 101446109U;
         static const AkUniqueID PLAY_SFX_ROUND_NOTICE = 1032364325U;
         static const AkUniqueID STOP_SFX_POURING_BEER = 4200562683U;
     } // namespace EVENTS

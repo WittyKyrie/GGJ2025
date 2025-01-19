@@ -348,6 +348,94 @@
 										<ActiveSource Name="sfx_drinking_round_02" ID="{D3E7E875-C437-45ED-991A-BE66350E530D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<Sound Name="sfx_prop_appear" ID="{7E7CEAEA-5EF4-4F18-A6F5-36B5B220D7A2}" ShortID="324421820">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_prop_appear" ID="{324F4BB0-11AA-4449-99D7-4682A2AC0165}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_prop_appear.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="155511779"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_prop_appear" ID="{324F4BB0-11AA-4449-99D7-4682A2AC0165}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_prop_notice" ID="{FAC316D4-5B35-478F-B87B-AB5E553D4E59}" ShortID="940118014">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_prop_notice" ID="{14C807C5-C666-440A-A300-4F77CF2ABB6E}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_prop_notice.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="907306917"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_prop_notice" ID="{14C807C5-C666-440A-A300-4F77CF2ABB6E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_prop_use" ID="{CDC64E6B-4076-4F9F-A60A-75972EC81E55}" ShortID="80072850">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_prop_use" ID="{7AB74283-062B-4007-97AB-38265AB5459C}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_prop_use.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="382344753"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_prop_use" ID="{7AB74283-062B-4007-97AB-38265AB5459C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="sfx_end_round" ID="{59E95676-25E7-4B61-B05A-ECC17147E1D9}" ShortID="855579388">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9310E035-DEB6-49AF-9E2B-6EF7229E117F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{90E220A4-6A19-4DC7-8976-9E7FE8A568CC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="sfx_end_round" ID="{BFD8E6F1-387E-448A-BC71-034A1F5D3E47}">
+											<Language>SFX</Language>
+											<AudioFile>sfx_end_round.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1031727826"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="sfx_end_round" ID="{BFD8E6F1-387E-448A-BC71-034A1F5D3E47}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
 						<ActorMixer Name="Menu" ID="{9DE1DC1A-A440-4327-B86F-82D5A6C9DE87}" ShortID="459973723">

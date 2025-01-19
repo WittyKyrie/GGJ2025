@@ -159,7 +159,7 @@
 				</AcousticTexture>
 			</AcousticTextures>
 		</SoundBank>
-		<SoundBank Id="3676622988" Type="User" Language="SFX" Hash="{71AF09CB-233E-7B5F-6C55-A3E5A6CACEC9}">
+		<SoundBank Id="3676622988" Type="User" Language="SFX" Hash="{08C3983B-41CE-9FF9-E802-31B8A83AF400}">
 			<ShortName>Bubble_Game</ShortName>
 			<Path>Bubble_Game.bnk</Path>
 			<Media>
@@ -179,6 +179,10 @@
 					<ShortName>sfx_cut_sence.wav</ShortName>
 					<CachePath>SFX/sfx_cut_sence_8E324C96.wem</CachePath>
 				</File>
+				<File Id="155511779" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_prop_appear.wav</ShortName>
+					<CachePath>SFX/sfx_prop_appear_8E324C96.wem</CachePath>
+				</File>
 				<File Id="225686808" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_amb_pour_beer.wav</ShortName>
 					<CachePath>SFX/sfx_amb_pour_beer_8E324C96.wem</CachePath>
@@ -190,6 +194,10 @@
 				<File Id="354479180" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_amb_cheer_beer.wav</ShortName>
 					<CachePath>SFX/sfx_amb_cheer_beer_8E324C96.wem</CachePath>
+				</File>
+				<File Id="382344753" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_prop_use.wav</ShortName>
+					<CachePath>SFX/sfx_prop_use_8E324C96.wem</CachePath>
 				</File>
 				<File Id="418813728" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>1.wav</ShortName>
@@ -211,6 +219,10 @@
 					<ShortName>sfx_amb_bar_menu.wav</ShortName>
 					<CachePath>SFX/sfx_amb_bar_menu_56CEF360.wem</CachePath>
 				</File>
+				<File Id="907306917" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_prop_notice.wav</ShortName>
+					<CachePath>SFX/sfx_prop_notice_8E324C96.wem</CachePath>
+				</File>
 				<File Id="914774554" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>sfx_drinking_round.wav</ShortName>
 					<CachePath>SFX/sfx_drinking_round_8E324C96.wem</CachePath>
@@ -222,6 +234,10 @@
 				<File Id="936146750" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pouring Fizzy Beverage.wav</ShortName>
 					<CachePath>SFX/Pouring Fizzy Beverage_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1031727826" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>sfx_end_round.wav</ShortName>
+					<CachePath>SFX/sfx_end_round_8E324C96.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -264,16 +280,20 @@
 					<MediaRefs>
 						<MediaRef Id="70743661"/>
 						<MediaRef Id="139651745"/>
+						<MediaRef Id="155511779"/>
 						<MediaRef Id="225686808"/>
 						<MediaRef Id="306116818"/>
 						<MediaRef Id="354479180"/>
+						<MediaRef Id="382344753"/>
 						<MediaRef Id="418813728"/>
 						<MediaRef Id="449944962"/>
 						<MediaRef Id="512534011"/>
 						<MediaRef Id="729234419"/>
+						<MediaRef Id="907306917"/>
 						<MediaRef Id="914774554"/>
 						<MediaRef Id="933675984"/>
 						<MediaRef Id="936146750"/>
+						<MediaRef Id="1031727826"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
@@ -302,9 +322,29 @@
 						<MediaRef Id="936146750"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2517229928" Name="Play_sfx_end_round" DurationType="OneShot" DurationMin="17.930363" DurationMax="17.930363">
+					<MediaRefs>
+						<MediaRef Id="1031727826"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2726246453" Name="Play_sfx_pouring_beer" DurationType="OneShot" DurationMin="27.065985" DurationMax="33.80989">
 					<MediaRefs>
 						<MediaRef Id="936146750"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2752235775" Name="Play_sfx_prop_appear" DurationType="OneShot" DurationMin="1.2591383" DurationMax="1.2591383">
+					<MediaRefs>
+						<MediaRef Id="155511779"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2568853496" Name="Play_sfx_prop_notice" DurationType="OneShot" DurationMin="0.89117914" DurationMax="0.89117914">
+					<MediaRefs>
+						<MediaRef Id="907306917"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="101446109" Name="Play_sfx_prop_use" DurationType="OneShot" DurationMin="3.739433" DurationMax="3.739433">
+					<MediaRefs>
+						<MediaRef Id="382344753"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1032364325" Name="Play_sfx_round_notice" DurationType="OneShot" DurationMin="0.55" DurationMax="0.55">
@@ -321,5 +361,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E96F5A97-E8D0-DAD0-6564-0C829441ADA6}</FileHash>
+	<FileHash>{D8372DE8-9721-9F09-DC12-38831A8CA9E0}</FileHash>
 </SoundBanksInfo>
