@@ -64,6 +64,6 @@ public class FluidParticlePool : MonoBehaviour
     // Public method to return a fluid particle to the pool
     public void ReleaseFluidParticle(GameObject fluidParticle)
     {
-        fluidParticlePool.Release(fluidParticle);
+        if(fluidParticle.activeInHierarchy) fluidParticlePool.Release(fluidParticle);
     }
 }
