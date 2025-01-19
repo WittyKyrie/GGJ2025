@@ -187,6 +187,7 @@ public class BeerCan : MonoBehaviour
             // Fluid particles are increasing
             if (!_isPouringSoundPlaying)
             {
+                Debug.Log("触发倒酒");
                 AkSoundEngine.PostEvent(SoundEffects.PouringBeer, GameManager.Instance.gameObject);
                 _isPouringSoundPlaying = true;
             }
@@ -196,7 +197,8 @@ public class BeerCan : MonoBehaviour
             // Fluid particles are not increasing
             if (_isPouringSoundPlaying)
             {
-                AkSoundEngine.PostEvent(SoundEffects.StopPouringBeer, GameManager.Instance.gameObject);
+                Debug.Log("触发停止倒酒");
+                // AkSoundEngine.PostEvent(SoundEffects.StopPouringBeer, GameManager.Instance.gameObject);
                 _isPouringSoundPlaying = false;
             }
         }

@@ -191,6 +191,7 @@ namespace Player
             ChangeHealth(num);
             if (currentHealth <= 0)
             {
+                AkSoundEngine.PostEvent(SoundEffects.EndRound, GameManager.Instance.gameObject);
                 DOVirtual.DelayedCall(1f, () =>
                 {
                     GameManager.Instance.ChangeState(GameState.Settlement);

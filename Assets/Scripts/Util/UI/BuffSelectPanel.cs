@@ -55,6 +55,7 @@ namespace Util.UI
             }
             
             selectObj.gameObject.SetActive(true);
+            AkSoundEngine.PostEvent(SoundEffects.PropAppear, GameManager.Instance.gameObject);
             simpleUIAnimation.DoBornAnimation().OnComplete(() =>
             {
                 btn.gameObject.SetActive(true);
@@ -82,6 +83,7 @@ namespace Util.UI
             }
             
             selectObj.gameObject.SetActive(true);
+            AkSoundEngine.PostEvent(SoundEffects.PropAppear, GameManager.Instance.gameObject);
             simpleUIAnimation.DoBornAnimation().OnComplete(() =>
             {
                 btn.gameObject.SetActive(true);
@@ -107,6 +109,7 @@ namespace Util.UI
             selectObj.gameObject.SetActive(false);
             redBck.SetActive(false);
             blueBck.SetActive(true);
+            AkSoundEngine.PostEvent(SoundEffects.PropNotice, GameManager.Instance.gameObject);
 
             red.gameObject.SetActive(true);
             red.StartShowingText();
@@ -130,6 +133,7 @@ namespace Util.UI
             redBck.SetActive(true);
             blueBck.SetActive(false);
             AkSoundEngine.PostEvent(SoundEffects.NormalClick, GameManager.Instance.gameObject);
+            AkSoundEngine.PostEvent(SoundEffects.PropNotice, GameManager.Instance.gameObject);
 
             blue.gameObject.SetActive(true);
             blue.StartShowingText();

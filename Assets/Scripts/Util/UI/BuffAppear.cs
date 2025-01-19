@@ -15,6 +15,7 @@ namespace Util.UI
         [Button]
         public void Init(string buffKey)
         {
+            AkSoundEngine.PostEvent(SoundEffects.PropUse, GameManager.Instance.gameObject);
             gameObject.SetActive(true);
             Time.timeScale = 0f;
             name.text = $"发动<shake>{BuffDataInfo.GetName(buffKey)}</shake>！！";
